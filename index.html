@@ -1,0 +1,1110 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Елена Алиева — агент по недвижимости в Ростове-на-Дону | DОМИАН</title>
+<meta name="description" content="Елена Алиева — топ-агент компании DОМИАН. Вторичное жильё и новостройки в Ростове-на-Дону. 5 лет опыта, более 500 сделок. Ипотека, материнский капитал, обмен, юридическая проверка.">
+<meta property="og:title" content="Елена Алиева — агент по недвижимости в Ростове-на-Дону">
+<meta property="og:description" content="Вторичка и новостройки без риска. 500+ сделок, 300+ семей с ключами.">
+<meta property="og:image" content="img/hero.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#FAF8F5">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Елена Алиева — агент по недвижимости DОМИАН",
+  "image": "img/hero.jpg",
+  "telephone": "+79289675655",
+  "address": {"@type": "PostalAddress","streetAddress": "пр. Космонавтов, 32в","addressLocality": "Ростов-на-Дону","addressCountry": "RU"},
+  "areaServed": "Ростов-на-Дону и Ростовская область"
+}
+</script>
+<style>
+:root{
+  --bg:#FAF8F5; --bg-2:#F3EFE8; --card:#FFFFFF;
+  --ink:#1E1F23; --ink-2:#55575E; --ink-3:#8A8C92;
+  --gold:#B08A4E; --gold-2:#D7BC8A; --gold-soft:rgba(176,138,78,.12);
+  --line:#E6DFD3; --red:#C3272F;
+  --radius:22px; --shadow:0 30px 60px -30px rgba(30,31,35,.25);
+  --ease:cubic-bezier(.22,1,.36,1);
+  --serif:'Cormorant Garamond', Georgia, serif;
+  --sans:'Manrope', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:var(--gold-2);color:var(--ink)}
+.container{width:min(1200px,100% - 32px);margin-inline:auto}
+section{position:relative;padding:120px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.eyebrow::before{content:"";width:34px;height:1px;background:currentColor}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(38px,5vw,64px);margin:18px 0 22px}
+h2 em,h1 em{font-style:italic;color:var(--gold)}
+.lead{color:var(--ink-2);font-size:clamp(17px,1.4vw,19px);max-width:620px}
+
+/* ---------- Чертёж на фоне ---------- */
+.blueprint{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.blueprint svg{position:absolute;left:50%;bottom:-2vh;width:max(1600px,110vw);height:auto;transform:translateX(-50%) translateY(var(--py,0px))}
+.blueprint .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(30,31,35,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(30,31,35,.035) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse at 50% 40%,#000 30%,transparent 80%)}
+.bp-line{fill:none;stroke:rgba(30,31,35,.13);stroke-width:1;vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 3.2s var(--ease) forwards}
+.bp-thin{stroke:rgba(30,31,35,.07)}
+.bp-gold{stroke:rgba(176,138,78,.28)}
+.bp-text{fill:rgba(30,31,35,.18);font:10px var(--sans);letter-spacing:.15em}
+@keyframes draw{to{stroke-dashoffset:0}}
+
+/* ---------- Прелоадер ---------- */
+.preloader{position:fixed;inset:0;background:var(--bg);z-index:100;display:grid;place-items:center;transition:opacity .7s var(--ease),visibility .7s}
+.preloader.done{opacity:0;visibility:hidden}
+.preloader .mono{font-family:var(--serif);font-size:64px;color:var(--ink);position:relative}
+.preloader .mono span{color:var(--gold);font-style:italic}
+.preloader .bar{width:160px;height:1px;background:var(--line);margin:18px auto 0;overflow:hidden}
+.preloader .bar i{display:block;height:100%;background:var(--gold);animation:load 1.1s var(--ease) forwards;transform-origin:left;transform:scaleX(0)}
+@keyframes load{to{transform:scaleX(1)}}
+
+/* ---------- Шапка ---------- */
+.progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-2));width:100%;transform-origin:left;transform:scaleX(0);z-index:60}
+header{position:fixed;inset:0 0 auto;z-index:50;transition:background .4s,box-shadow .4s,padding .4s;padding:22px 0}
+header.scrolled{background:rgba(250,248,245,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line);padding:12px 0}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:flex;align-items:center;gap:12px;line-height:1.1}
+.logo-mark{width:44px;height:44px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-size:20px;color:var(--gold);font-style:italic}
+.logo b{font-family:var(--serif);font-size:22px;font-weight:600;display:block}
+.logo small{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3)}
+.menu{display:flex;gap:30px;font-size:15px;font-weight:500}
+.menu a{position:relative;color:var(--ink-2);transition:color .3s}
+.menu a::after{content:"";position:absolute;left:0;bottom:-4px;width:100%;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
+.menu a:hover{color:var(--ink)}
+.menu a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav-right{display:flex;align-items:center;gap:18px}
+.phone{font-weight:700;font-size:16px;white-space:nowrap}
+.burger{display:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);position:relative}
+.burger i{position:absolute;left:13px;right:13px;height:1.5px;background:var(--ink);transition:transform .4s var(--ease),top .4s}
+.burger i:nth-child(1){top:17px}.burger i:nth-child(2){top:25px}
+.burger.open i:nth-child(1){top:21px;transform:rotate(45deg)}
+.burger.open i:nth-child(2){top:21px;transform:rotate(-45deg)}
+.mobile-menu{position:fixed;inset:0;background:var(--bg);z-index:45;display:flex;flex-direction:column;justify-content:center;padding:32px;gap:8px;clip-path:circle(0 at calc(100% - 38px) 38px);transition:clip-path .8s var(--ease)}
+.mobile-menu.open{clip-path:circle(150% at calc(100% - 38px) 38px)}
+.mobile-menu a{font-family:var(--serif);font-size:40px;line-height:1.3}
+.mobile-menu .phone{font-family:var(--sans);font-size:20px;margin-top:24px;color:var(--gold)}
+
+/* ---------- Кнопки ---------- */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:18px 30px;border-radius:100px;font-weight:600;font-size:16px;overflow:hidden;isolation:isolate;transition:transform .4s var(--ease),box-shadow .4s;white-space:nowrap}
+.btn-dark{background:var(--ink);color:#fff;box-shadow:0 18px 40px -18px rgba(30,31,35,.6)}
+.btn-dark::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,var(--gold),var(--gold-2));z-index:-1;transform:translateY(101%);transition:transform .5s var(--ease)}
+.btn-dark:hover::before{transform:translateY(0)}
+.btn-dark:hover{color:var(--ink)}
+.btn-ghost{border:1px solid var(--ink);background:transparent}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+.btn-small{padding:12px 22px;font-size:14px}
+.btn svg{width:18px;height:18px;transition:transform .4s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.shine::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);animation:shine 4.5s 2s infinite}
+@keyframes shine{0%,70%{left:-60%}100%{left:130%}}
+
+/* ---------- Первый экран ---------- */
+.hero{min-height:100vh;min-height:100svh;padding:150px 0 90px;display:flex;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+.badge-top{display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 8px;border:1px solid var(--line);border-radius:100px;background:rgba(255,255,255,.7);font-size:14px;font-weight:500;margin-bottom:28px}
+.badge-top b{background:var(--ink);color:#fff;border-radius:100px;padding:4px 12px;font-size:12px;letter-spacing:.08em}
+.pulse{width:8px;height:8px;border-radius:50%;background:#2DB36A;box-shadow:0 0 0 0 rgba(45,179,106,.5);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(45,179,106,0)}100%{box-shadow:0 0 0 0 rgba(45,179,106,0)}}
+.hero h1{font-size:clamp(44px,5.2vw,78px);margin-bottom:24px}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em}
+.hero h1 .w>span{display:inline-block;transform:translateY(110%);transition:transform 1.1s var(--ease)}
+.loaded .hero h1 .w>span{transform:none}
+.hero .lead{margin-bottom:38px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:46px}
+.hero-facts{display:flex;gap:36px;flex-wrap:wrap;padding-top:30px;border-top:1px solid var(--line)}
+.hero-facts div{font-size:14px;color:var(--ink-2);line-height:1.35}
+.hero-facts b{display:block;font-family:var(--serif);font-size:40px;font-weight:600;color:var(--ink);line-height:1}
+.hero-visual{position:relative;justify-self:center;width:min(440px,100%)}
+.arch{position:relative;aspect-ratio:3/4.2;border-radius:300px 300px 26px 26px;overflow:hidden;box-shadow:var(--shadow);clip-path:inset(100% 0 0 0 round 300px 300px 26px 26px);transition:clip-path 1.6s var(--ease) .3s}
+.loaded .arch{clip-path:inset(0 0 0 0 round 300px 300px 26px 26px)}
+.arch img{width:100%;height:118%;object-fit:cover;object-position:50% 20%;transform:translateY(var(--iy,0px)) scale(1.08);transition:transform .2s linear}
+.arch-outline{position:absolute;inset:-18px -18px auto;height:calc(100% + 36px);pointer-events:none}
+.arch-outline path{fill:none;stroke:var(--gold);stroke-width:1;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.4s var(--ease) .9s}
+.loaded .arch-outline path{stroke-dashoffset:0}
+.float{position:absolute;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(230,223,211,.9);border-radius:18px;padding:14px 18px;box-shadow:0 20px 40px -20px rgba(30,31,35,.3);font-size:13px;line-height:1.35;opacity:0;transform:translateY(20px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.loaded .float{opacity:1;transform:none}
+.float b{display:block;font-size:15px}
+.float .ic{width:38px;height:38px;border-radius:12px;background:var(--gold-soft);display:grid;place-items:center;color:var(--gold);flex:none}
+.float .row{display:flex;gap:12px;align-items:center}
+.f1{left:-70px;top:22%;transition-delay:1.3s!important;animation:bob 6s ease-in-out infinite}
+.f2{right:-50px;bottom:18%;transition-delay:1.5s!important;animation:bob 7s ease-in-out 1s infinite}
+.f3{left:-30px;bottom:-24px;transition-delay:1.7s!important;animation:bob 6.5s ease-in-out .5s infinite}
+@keyframes bob{50%{translate:0 -10px}}
+.stars{color:var(--gold);letter-spacing:2px}
+.scroll-hint{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);width:26px;height:42px;border:1px solid var(--ink-3);border-radius:20px}
+.scroll-hint::after{content:"";position:absolute;left:50%;top:8px;width:3px;height:8px;border-radius:2px;background:var(--gold);transform:translateX(-50%);animation:wheel 1.8s infinite}
+@keyframes wheel{to{transform:translate(-50%,14px);opacity:0}}
+
+/* ---------- Бегущая строка ---------- */
+.marquee{border-block:1px solid var(--line);background:rgba(255,255,255,.55);padding:22px 0;overflow:hidden;white-space:nowrap}
+.marquee-track{display:inline-flex;gap:48px;animation:marquee 38s linear infinite;font-family:var(--serif);font-size:30px;font-style:italic}
+.marquee-track span{display:inline-flex;align-items:center;gap:48px}
+.marquee-track span::after{content:"✦";font-style:normal;font-size:16px;color:var(--gold)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* ---------- Цифры ---------- */
+.stats{padding:90px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.7);overflow:hidden}
+.stat{padding:42px 32px;border-right:1px solid var(--line);position:relative}
+.stat:last-child{border-right:0}
+.stat .num{font-family:var(--serif);font-size:clamp(52px,6vw,78px);line-height:1;font-weight:600}
+.stat .num sup{font-size:.45em;color:var(--gold);vertical-align:top;margin-left:2px}
+.stat p{color:var(--ink-2);margin-top:12px;font-size:15px}
+.stat::before{content:"";position:absolute;left:32px;top:0;width:40px;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 1s var(--ease) .3s}
+.stat.in::before{transform:scaleX(1)}
+
+/* ---------- Обо мне ---------- */
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
+.about-photos{position:relative;height:640px}
+.about-photos .p1,.about-photos .p2{position:absolute;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.about-photos .p1{left:0;top:0;width:72%;height:86%}
+.about-photos .p2{right:0;bottom:0;width:48%;height:52%;border:8px solid var(--bg)}
+.about-photos img{width:100%;height:100%;object-fit:cover;object-position:50% 15%}
+.about-photos .exp{position:absolute;right:6%;top:6%;width:132px;height:132px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;text-align:center;line-height:1.1;z-index:2}
+.about-photos .exp b{font-family:var(--serif);font-size:46px;display:block;color:var(--gold-2)}
+.about-photos .exp small{font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.rotating{position:absolute;inset:-14px;animation:spin 18s linear infinite}
+.rotating text{fill:var(--gold);font:600 9.5px var(--sans);letter-spacing:.32em;text-transform:uppercase}
+@keyframes spin{to{transform:rotate(360deg)}}
+.checks{list-style:none;display:grid;gap:16px;margin:30px 0 40px}
+.checks li{display:flex;gap:16px;align-items:flex-start}
+.checks li::before{content:"";flex:none;width:26px;height:26px;margin-top:1px;border-radius:50%;background:var(--gold-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B08A4E' stroke-width='2.5'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/15px no-repeat}
+.quote{font-family:var(--serif);font-style:italic;font-size:26px;line-height:1.35;padding-left:24px;border-left:2px solid var(--gold);margin-top:6px}
+.sign{margin-top:14px;font-size:14px;color:var(--ink-3)}
+
+/* ---------- Услуги ---------- */
+.head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:56px;flex-wrap:wrap}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.service{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:36px 32px 34px;overflow:hidden;transition:transform .5s var(--ease),box-shadow .5s,border-color .5s;transform-style:preserve-3d}
+.service:hover{box-shadow:var(--shadow);border-color:transparent}
+.service::before{content:"";position:absolute;inset:0;background:radial-gradient(400px circle at var(--mx,50%) var(--my,50%),rgba(215,188,138,.22),transparent 45%);opacity:0;transition:opacity .4s}
+.service:hover::before{opacity:1}
+.service .icon{width:60px;height:60px;border-radius:18px;display:grid;place-items:center;background:var(--bg-2);color:var(--gold);margin-bottom:26px;transition:background .4s,color .4s,transform .5s var(--ease)}
+.service:hover .icon{background:var(--ink);color:var(--gold-2);transform:rotate(-6deg) scale(1.05)}
+.service .icon svg{width:28px;height:28px}
+.service h3{font-size:30px;margin-bottom:10px;position:relative}
+.service p{color:var(--ink-2);font-size:15.5px;position:relative}
+.service .n{position:absolute;right:26px;top:22px;font-family:var(--serif);font-size:18px;color:var(--ink-3)}
+.service.featured{background:var(--ink);color:#fff;border-color:var(--ink)}
+.service.featured p{color:rgba(255,255,255,.72)}
+.service.featured .icon{background:rgba(255,255,255,.08);color:var(--gold-2)}
+.service.featured .n{color:var(--gold-2)}
+.service .tag{display:inline-block;margin-top:18px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-2);border:1px solid rgba(215,188,138,.4);padding:6px 12px;border-radius:100px;position:relative}
+
+/* ---------- Северный ---------- */
+.district{background:var(--ink);color:#fff;border-radius:36px;padding:80px 70px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;overflow:hidden;position:relative}
+.district .lead{color:rgba(255,255,255,.72)}
+.district h2 em{color:var(--gold-2)}
+.district .eyebrow{color:var(--gold-2)}
+.map-draw{width:100%;height:auto}
+.map-draw .road{fill:none;stroke:rgba(255,255,255,.22);stroke-width:1.2;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.6s var(--ease)}
+.map-draw .road.main{stroke:rgba(255,255,255,.4);stroke-width:2}
+.map-draw .zone{fill:rgba(215,188,138,.1);stroke:var(--gold-2);stroke-width:1.5;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 3s var(--ease) .6s,fill .8s 2s}
+.map-draw .blk{fill:rgba(255,255,255,.06);stroke:rgba(255,255,255,.14);opacity:0;transition:opacity 1s 1.2s}
+.in .map-draw .road,.in .map-draw .zone{stroke-dashoffset:0}
+.in .map-draw .blk{opacity:1}
+.map-draw .pin{opacity:0;transform-box:fill-box;transform-origin:center bottom;transform:translateY(-14px);transition:all .8s var(--ease) 2.2s}
+.in .map-draw .pin{opacity:1;transform:none}
+.map-draw .ring{fill:none;stroke:var(--gold-2);transform-box:fill-box;transform-origin:center;animation:ring 2.4s infinite}
+@keyframes ring{from{transform:scale(.4);opacity:1}to{transform:scale(2.6);opacity:0}}
+.map-draw text{fill:rgba(255,255,255,.55);font:600 11px var(--sans);letter-spacing:.2em}
+.district ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px 24px;margin-top:30px}
+.district li{padding-left:22px;position:relative;font-size:15.5px;color:rgba(255,255,255,.85)}
+.district li::before{content:"";position:absolute;left:0;top:10px;width:10px;height:1px;background:var(--gold-2)}
+
+/* ---------- Этапы ---------- */
+.steps{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:22px}
+.steps-line{position:absolute;left:0;right:0;top:34px;height:1px;background:var(--line)}
+.steps-line i{position:absolute;inset:0;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 2.4s var(--ease)}
+.in .steps-line i{transform:scaleX(1)}
+.step{position:relative}
+.step .dot{width:68px;height:68px;border-radius:50%;background:var(--bg);border:1px solid var(--line);display:grid;place-items:center;font-family:var(--serif);font-size:26px;margin-bottom:24px;position:relative;z-index:1;transition:background .6s,color .6s,border-color .6s}
+.in .step .dot{background:var(--ink);color:var(--gold-2);border-color:var(--ink)}
+.step:nth-child(2) .dot{transition-delay:.2s}.step:nth-child(3) .dot{transition-delay:.7s}.step:nth-child(4) .dot{transition-delay:1.2s}.step:nth-child(5) .dot{transition-delay:1.7s}.step:nth-child(6) .dot{transition-delay:2.2s}
+.step h3{font-size:25px;margin-bottom:8px}
+.step p{font-size:15px;color:var(--ink-2)}
+
+/* ---------- Квиз ---------- */
+.quiz-wrap{display:grid;grid-template-columns:.8fr 1.2fr;background:var(--card);border:1px solid var(--line);border-radius:36px;overflow:hidden;box-shadow:var(--shadow)}
+.quiz-side{position:relative;min-height:560px}
+.quiz-side img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 15%}
+.quiz-side .note{position:absolute;left:24px;right:24px;bottom:24px;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-radius:18px;padding:18px 20px;font-size:15px;line-height:1.45}
+.quiz-side .note b{display:block;font-family:var(--serif);font-size:22px}
+.quiz{padding:56px 56px 48px;display:flex;flex-direction:column}
+.quiz-top{display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--ink-3);margin-bottom:12px}
+.quiz-bar{height:3px;background:var(--bg-2);border-radius:3px;overflow:hidden;margin-bottom:36px}
+.quiz-bar i{display:block;height:100%;width:20%;background:linear-gradient(90deg,var(--gold),var(--gold-2));transition:width .6s var(--ease)}
+.q-step{display:none;animation:qin .6s var(--ease)}
+.q-step.active{display:block}
+@keyframes qin{from{opacity:0;transform:translateX(30px)}}
+.q-step h3{font-size:clamp(28px,3vw,38px);margin-bottom:26px}
+.options{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.opt{border:1px solid var(--line);border-radius:16px;padding:18px 20px;text-align:left;font-weight:500;display:flex;align-items:center;gap:14px;transition:border-color .3s,background .3s,transform .3s var(--ease)}
+.opt:hover{border-color:var(--gold);transform:translateY(-2px)}
+.opt.sel{border-color:var(--ink);background:var(--ink);color:#fff}
+.opt .r{width:20px;height:20px;border-radius:50%;border:1.5px solid var(--ink-3);flex:none;position:relative}
+.opt.sel .r{border-color:var(--gold-2)}
+.opt.sel .r::after{content:"";position:absolute;inset:4px;border-radius:50%;background:var(--gold-2)}
+.field{display:block;margin-bottom:14px}
+.field span{display:block;font-size:13px;color:var(--ink-3);margin-bottom:6px;font-weight:500}
+.field input,.field textarea,.field select{width:100%;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:var(--bg);font:inherit;font-size:16px;color:var(--ink);transition:border-color .3s,box-shadow .3s}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px var(--gold-soft)}
+.field textarea{resize:vertical;min-height:96px}
+.quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:30px;gap:12px}
+.back{font-weight:600;color:var(--ink-3);transition:color .3s}
+.back:hover{color:var(--ink)}
+.back[hidden]{visibility:hidden;display:inline}
+.privacy{font-size:12.5px;color:var(--ink-3);margin-top:12px}
+
+/* ---------- Калькулятор ---------- */
+.calc{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
+.calc-box,.calc-res{border-radius:var(--radius);padding:44px}
+.calc-box{background:var(--card);border:1px solid var(--line)}
+.calc-res{background:var(--ink);color:#fff;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.calc-res::after{content:"";position:absolute;right:-120px;top:-120px;width:320px;height:320px;border-radius:50%;border:1px solid rgba(215,188,138,.25);box-shadow:0 0 0 40px rgba(215,188,138,.04),0 0 0 80px rgba(215,188,138,.03)}
+.range{margin-bottom:30px}
+.range-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px;gap:10px}
+.range-top span{color:var(--ink-2);font-size:15px}
+.range-top output{font-weight:700;font-size:20px}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--gold) var(--p,50%),var(--line) var(--p,50%));outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:#fff;border:6px solid var(--ink);cursor:grab;transition:transform .2s}
+input[type=range]::-webkit-slider-thumb:active{transform:scale(1.2)}
+input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:#fff;border:6px solid var(--ink);cursor:grab}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+.chip{padding:10px 16px;border-radius:100px;border:1px solid var(--line);font-size:14px;font-weight:600;transition:all .3s}
+.chip.sel{background:var(--ink);color:#fff;border-color:var(--ink)}
+.calc-res small{color:rgba(255,255,255,.6);font-size:14px;letter-spacing:.06em}
+.big{font-family:var(--serif);font-size:clamp(52px,6vw,72px);line-height:1;color:var(--gold-2);margin:8px 0 30px}
+.res-rows{display:grid;gap:14px;border-top:1px solid rgba(255,255,255,.12);padding-top:24px;margin-bottom:30px}
+.res-rows div{display:flex;justify-content:space-between;gap:10px;font-size:15px;color:rgba(255,255,255,.75)}
+.res-rows b{color:#fff}
+.calc-res .btn{margin-top:auto;align-self:flex-start;position:relative;z-index:1}
+.calc-res .btn-dark{background:#fff;color:var(--ink)}
+.disclaimer{font-size:12.5px;color:rgba(255,255,255,.45);margin-top:16px;position:relative;z-index:1}
+
+/* ---------- DОМИАН ---------- */
+.company{display:grid;grid-template-columns:auto 1fr;gap:70px;align-items:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:70px 0}
+.company .years{font-family:var(--serif);font-size:clamp(130px,16vw,220px);line-height:.8;font-weight:600;background:linear-gradient(160deg,var(--ink) 30%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.company .years small{display:block;font-size:22px;font-family:var(--sans);font-weight:600;color:var(--ink-2);-webkit-text-fill-color:var(--ink-2);letter-spacing:.1em;text-transform:uppercase;margin-top:14px}
+.company h2{font-size:clamp(34px,4vw,52px)}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
+.pillars div{font-size:15px;color:var(--ink-2);padding-top:16px;border-top:1px solid var(--gold)}
+.pillars b{display:block;color:var(--ink);font-size:16px;margin-bottom:4px}
+
+/* ---------- Галерея ---------- */
+.gallery{padding:60px 0 120px;overflow:hidden}
+.g-track{display:flex;gap:22px;width:max-content;animation:marquee 60s linear infinite}
+.gallery:hover .g-track{animation-play-state:paused}
+.g-item{width:300px;height:420px;border-radius:var(--radius);overflow:hidden;flex:none;position:relative}
+.g-item:nth-child(even){margin-top:50px}
+.g-item img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;transition:transform 1.2s var(--ease),filter 1.2s}
+.g-item:hover img{transform:scale(1.07)}
+
+/* ---------- Отзывы ---------- */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.review{border:1px dashed #D9CFBE;border-radius:var(--radius);padding:36px 32px;min-height:260px;display:flex;flex-direction:column;background:rgba(255,255,255,.5)}
+.review .qm{font-family:var(--serif);font-size:80px;line-height:.6;color:var(--gold-2);height:36px}
+.review .ph{flex:1;display:grid;gap:10px;margin:12px 0 24px;align-content:start}
+.review .ph i{display:block;height:10px;border-radius:6px;background:linear-gradient(90deg,var(--bg-2),#EDE7DD,var(--bg-2));background-size:200% 100%;animation:sk 2.4s infinite}
+.review .ph i:nth-child(2){width:85%}.review .ph i:nth-child(3){width:65%}
+@keyframes sk{to{background-position:-200% 0}}
+.review .who{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--ink-3)}
+.review .av{width:44px;height:44px;border-radius:50%;background:var(--bg-2)}
+
+/* ---------- FAQ ---------- */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:26px 0;font-family:var(--serif);font-size:26px;line-height:1.25}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{flex:none;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);position:relative;transition:transform .5s var(--ease),background .4s}
+.faq summary i::before,.faq summary i::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:var(--ink);transform:translate(-50%,-50%)}
+.faq summary i::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .4s}
+.faq details[open] summary i{background:var(--ink);transform:rotate(180deg)}
+.faq details[open] summary i::before{background:#fff}
+.faq details[open] summary i::after{transform:translate(-50%,-50%) rotate(0);background:#fff}
+.faq .ans{color:var(--ink-2);padding:0 60px 26px 0;animation:qin .5s var(--ease)}
+
+/* ---------- Контакты ---------- */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.c-card{background:var(--ink);color:#fff;border-radius:36px;padding:56px;position:relative;overflow:hidden}
+.c-card h2 em{color:var(--gold-2)}
+.c-card .lead{color:rgba(255,255,255,.7)}
+.c-list{display:grid;gap:12px;margin:34px 0}
+.c-link{display:flex;align-items:center;gap:16px;padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);transition:background .3s,transform .4s var(--ease)}
+.c-link:hover{background:rgba(255,255,255,.12);transform:translateX(6px)}
+.c-link .ci{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:rgba(215,188,138,.15);color:var(--gold-2);flex:none}
+.c-link small{display:block;color:rgba(255,255,255,.55);font-size:13px}
+.c-link b{font-size:17px}
+.c-form{background:var(--card);border:1px solid var(--line);border-radius:36px;padding:56px;display:flex;flex-direction:column}
+.c-form h3{font-size:38px;margin-bottom:8px}
+.c-form > p{color:var(--ink-2);margin-bottom:26px}
+.c-form .btn{width:100%;margin-top:8px}
+.map{margin-top:22px;border-radius:36px;overflow:hidden;height:380px;border:1px solid var(--line);position:relative;background:var(--bg-2)}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(1) contrast(.95) brightness(1.03)}
+.map .addr{position:absolute;left:24px;top:24px;background:#fff;border-radius:18px;padding:18px 22px;box-shadow:var(--shadow);font-size:15px;max-width:calc(100% - 48px)}
+.map .addr b{display:block;font-family:var(--serif);font-size:24px}
+
+footer{padding:60px 0 110px;color:var(--ink-3);font-size:14px}
+.foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:center;border-top:1px solid var(--line);padding-top:36px}
+
+/* ---------- Плавающие элементы ---------- */
+.fab{position:fixed;right:24px;bottom:24px;z-index:40;display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+.fab-main{width:64px;height:64px;border-radius:50%;background:var(--ink);color:var(--gold-2);display:grid;place-items:center;box-shadow:0 20px 40px -12px rgba(30,31,35,.5);position:relative;transition:transform .4s var(--ease)}
+.fab-main::before{content:"";position:absolute;inset:0;border-radius:50%;border:1px solid var(--gold);animation:ring 2.6s infinite}
+.fab-main svg{width:26px;height:26px;transition:transform .4s var(--ease)}
+.fab.open .fab-main svg{transform:rotate(135deg)}
+.fab-list{display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+.fab-list a{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);padding:10px 16px 10px 10px;border-radius:100px;font-weight:600;font-size:14px;box-shadow:0 10px 30px -14px rgba(30,31,35,.35);opacity:0;transform:translateY(16px) scale(.9);pointer-events:none;transition:all .4s var(--ease)}
+.fab.open .fab-list a{opacity:1;transform:none;pointer-events:auto}
+.fab.open .fab-list a:nth-child(2){transition-delay:.05s}.fab.open .fab-list a:nth-child(1){transition-delay:.1s}
+.fab-list .i{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:12px;font-weight:700}
+.toTop{position:fixed;left:24px;bottom:24px;z-index:40;width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.9);display:grid;place-items:center;opacity:0;transform:translateY(20px);transition:all .4s var(--ease);box-shadow:0 10px 30px -14px rgba(30,31,35,.35)}
+.toTop.show{opacity:1;transform:none}
+.toTop svg.ringp{position:absolute;inset:0;transform:rotate(-90deg)}
+.toTop svg.ringp circle{fill:none;stroke:var(--gold);stroke-width:2;stroke-dasharray:151;stroke-dashoffset:151}
+
+.cursor{position:fixed;left:0;top:0;width:36px;height:36px;border:1px solid var(--gold);border-radius:50%;pointer-events:none;z-index:200;transform:translate(-50%,-50%);transition:width .3s var(--ease),height .3s var(--ease),background .3s,opacity .3s;opacity:0;mix-blend-mode:multiply}
+.cursor.big{width:70px;height:70px;background:rgba(215,188,138,.18)}
+.cursor-dot{position:fixed;left:0;top:0;width:5px;height:5px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:200;transform:translate(-50%,-50%);opacity:0}
+
+/* ---------- Модальное окно ---------- */
+.modal{position:fixed;inset:0;z-index:90;display:grid;place-items:center;padding:16px;background:rgba(30,31,35,.45);backdrop-filter:blur(6px);opacity:0;visibility:hidden;transition:all .4s}
+.modal.open{opacity:1;visibility:visible}
+.modal-box{background:var(--bg);border-radius:28px;padding:44px 40px;max-width:480px;width:100%;text-align:center;transform:translateY(30px) scale(.96);transition:transform .5s var(--ease);position:relative}
+.modal.open .modal-box{transform:none}
+.modal-box .ok{width:76px;height:76px;margin:0 auto 20px}
+.modal-box .ok circle,.modal-box .ok path{fill:none;stroke:var(--gold);stroke-width:2;stroke-dasharray:1;stroke-dashoffset:1}
+.modal.open .ok circle{animation:draw 1s var(--ease) .2s forwards}
+.modal.open .ok path{animation:draw .6s var(--ease) .9s forwards}
+.modal-box h3{font-size:34px;margin-bottom:10px}
+.modal-box p{color:var(--ink-2);font-size:15.5px;margin-bottom:24px}
+.modal-box .acts{display:grid;gap:10px}
+.modal-box .close{position:absolute;right:18px;top:16px;font-size:28px;color:var(--ink-3);width:40px;height:40px}
+
+/* ---------- Появление при прокрутке ---------- */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal-img{clip-path:inset(12% 12% 12% 12% round var(--radius));transition:clip-path 1.4s var(--ease)}
+.reveal-img.in{clip-path:inset(0 0 0 0 round var(--radius))}
+.d1{transition-delay:.1s!important}.d2{transition-delay:.2s!important}.d3{transition-delay:.3s!important}.d4{transition-delay:.4s!important}.d5{transition-delay:.5s!important}
+
+/* ---------- Адаптив ---------- */
+@media (max-width:1100px){
+  .menu{display:none}.burger{display:block}
+  .hero-grid,.about-grid,.district,.quiz-wrap,.calc,.faq-grid,.contact{grid-template-columns:1fr}
+  .hero-visual{margin-top:30px}
+  .f1{left:-10px}.f2{right:-10px}
+  .services{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr;gap:28px}
+  .steps-line{left:34px;right:auto;top:0;bottom:0;width:1px;height:auto}
+  .steps-line i{transform:scaleY(0);transform-origin:top}
+  .in .steps-line i{transform:scaleY(1)}
+  .step{display:grid;grid-template-columns:68px 1fr;gap:22px}
+  .step .dot{margin:0}
+  .district{padding:56px 36px}
+  .quiz-side{min-height:420px}
+  .company{grid-template-columns:1fr;gap:20px}
+  .reviews{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  body{font-size:16px}
+  section{padding:80px 0}
+  .hero{padding:120px 0 70px}
+  .nav-right .phone,.nav-right .btn{display:none}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .stat{padding:28px 20px;border-bottom:1px solid var(--line)}
+  .stat:nth-child(2n){border-right:0}
+  .stat:nth-child(n+3){border-bottom:0}
+  .stat::before{left:20px}
+  .services,.reviews,.pillars{grid-template-columns:1fr}
+  .about-photos{height:480px}
+  .about-photos .exp{width:108px;height:108px}
+  .about-photos .exp b{font-size:36px}
+  .district{padding:44px 22px;border-radius:26px}
+  .district ul{grid-template-columns:1fr}
+  .quiz{padding:34px 22px}
+  .options{grid-template-columns:1fr}
+  .calc-box,.calc-res,.c-card,.c-form{padding:32px 22px}
+  .c-card,.c-form,.quiz-wrap{border-radius:26px}
+  .hero-ctas .btn{width:100%}
+  .hero-facts{gap:22px}
+  .f1{top:auto;bottom:26%;left:-6px}
+  .f2{bottom:6%;right:-6px}
+  .f3,.scroll-hint{display:none}
+  .g-item{width:220px;height:310px}
+  .faq .ans{padding-right:0}
+  .faq summary{font-size:22px}
+  .marquee-track{font-size:24px}
+  .fab{right:16px;bottom:16px}.toTop{left:16px;bottom:16px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<div class="preloader" id="preloader"><div><div class="mono">Е<span>А</span></div><div class="bar"><i></i></div></div></div>
+<div class="progress" id="progress"></div>
+<div class="cursor" id="cursor"></div><div class="cursor-dot" id="cursorDot"></div>
+
+<!-- Полупрозрачный чертёж новостроек на фоне -->
+<div class="blueprint" aria-hidden="true"><div class="grid"></div><svg id="bp" viewBox="0 0 1600 700" preserveAspectRatio="xMidYMax meet"></svg></div>
+
+<header id="header">
+  <div class="container nav">
+    <a href="#top" class="logo" aria-label="Елена Алиева — на главную">
+      <span class="logo-mark">ЕА</span>
+      <span><b>Елена Алиева</b><small>агент DОМИАН</small></span>
+    </a>
+    <nav class="menu" aria-label="Основное меню">
+      <a href="#about">Обо мне</a><a href="#services">Услуги</a><a href="#quiz">Подбор</a><a href="#calc">Ипотека</a><a href="#faq">Вопросы</a><a href="#contacts">Контакты</a>
+    </nav>
+    <div class="nav-right">
+      <a class="phone" href="tel:+79289675655">+7 (928) 967-56-55</a>
+      <a href="#contacts" class="btn btn-dark btn-small" data-magnetic>Консультация</a>
+      <button class="burger" id="burger" aria-label="Открыть меню"><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-menu" id="mobileMenu" aria-label="Мобильное меню">
+  <a href="#about">Обо мне</a><a href="#services">Услуги</a><a href="#quiz">Подбор квартиры</a><a href="#calc">Ипотека</a><a href="#faq">Вопросы</a><a href="#contacts">Контакты</a>
+  <a class="phone" href="tel:+79289675655">+7 (928) 967-56-55</a>
+</nav>
+
+<main id="top">
+<!-- ============ ПЕРВЫЙ ЭКРАН ============ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="badge-top"><b>ТОП</b> Лучшие агенты компании DОМИАН <span class="pulse" title="На связи сегодня"></span></div>
+      <h1 id="heroTitle">Квартира в <em>Ростове-на-Дону</em> — без риска и лишних хлопот</h1>
+      <p class="lead">Я Елена Алиева, агент по недвижимости. Помогаю купить, продать или обменять квартиру на вторичном рынке и в новостройках. Беру на себя всё: от подбора и ипотеки до проверки документов и передачи ключей.</p>
+      <div class="hero-ctas">
+        <a href="#quiz" class="btn btn-dark shine" data-magnetic>Подобрать квартиру <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#contacts" class="btn btn-ghost" data-magnetic>Бесплатная консультация</a>
+      </div>
+      <div class="hero-facts">
+        <div><b>5 лет</b>опыта в сделках</div>
+        <div><b>500+</b>закрытых сделок</div>
+        <div><b>2–3 мес.</b>средний срок сделки</div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg class="arch-outline" viewBox="0 0 476 650" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M10 640 V238 A228 228 0 0 1 466 238 V640 Z" vector-effect="non-scaling-stroke"/></svg>
+      <div class="arch"><img src="img/hero.jpg" alt="Елена Алиева — агент по недвижимости в Ростове-на-Дону" id="heroImg" fetchpriority="high"></div>
+      <div class="float f1"><div class="row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4zM17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg></span><span><b>Топ-агент</b>компании DОМИАН</span></div></div>
+      <div class="float f2"><div class="row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V10l9-7 9 7v11h-6v-6H9v6z"/></svg></span><span><b>300+ семей</b>уже получили ключи</span></div></div>
+      <div class="float f3"><span class="stars">★★★★★</span><b>Вторичка и новостройки</b></div>
+    </div>
+  </div>
+  <a href="#stats" class="scroll-hint" aria-label="Прокрутить вниз"></a>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-track">
+  <span>Вторичное жильё</span><span>Новостройки</span><span>Ипотека и одобрение</span><span>Материнский капитал</span><span>Обмен квартиры</span><span>Юридическая проверка</span><span>Северный район</span>
+  <span>Вторичное жильё</span><span>Новостройки</span><span>Ипотека и одобрение</span><span>Материнский капитал</span><span>Обмен квартиры</span><span>Юридическая проверка</span><span>Северный район</span>
+</div></div>
+
+<!-- ============ ЦИФРЫ ============ -->
+<section class="stats" id="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat reveal"><div class="num"><span data-count="5">0</span></div><p>лет помогаю с недвижимостью в Ростове</p></div>
+      <div class="stat reveal d1"><div class="num"><span data-count="500">0</span><sup>+</sup></div><p>успешно закрытых сделок</p></div>
+      <div class="stat reveal d2"><div class="num"><span data-count="300">0</span><sup>+</sup></div><p>семей получили ключи от нового дома</p></div>
+      <div class="stat reveal d3"><div class="num"><span data-count="17">0</span></div><p>лет на рынке компании DОМИАН</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ОБО МНЕ ============ -->
+<section id="about" style="padding-top:40px">
+  <div class="container about-grid">
+    <div class="about-photos">
+      <div class="p1 reveal-img"><img src="img/about.jpg" alt="Елена Алиева" loading="lazy" data-parallax="0.06"></div>
+      <div class="p2 reveal-img d3"><img src="img/armchair.jpg" alt="Елена Алиева в офисе" loading="lazy"></div>
+      <div class="exp">
+        <svg class="rotating" viewBox="0 0 160 160" aria-hidden="true"><defs><path id="circ" d="M80 80 m-66 0 a66 66 0 1 1 132 0 a66 66 0 1 1 -132 0"/></defs><text><textPath href="#circ">Елена Алиева • DОМИАН • Ростов-на-Дону • </textPath></text></svg>
+        <div><b>5</b><small>лет<br>опыта</small></div>
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow reveal">Обо мне</span>
+      <h2 class="reveal d1">Ваш личный эксперт <em>по недвижимости</em></h2>
+      <p class="lead reveal d2">Пять лет я каждый день работаю с квартирами в Ростове-на-Дону: от проверки документов до ключей. Я вхожу в число лучших агентов компании DОМИАН и за это время провела более 500 сделок. Моя задача — чтобы вы купили или продали квартиру выгодно, спокойно и без рисков.</p>
+      <ul class="checks">
+        <li class="reveal d2">Веду сделку лично от первой встречи до передачи ключей</li>
+        <li class="reveal d3">Проверяю юридическую чистоту каждого объекта перед сделкой</li>
+        <li class="reveal d4">Помогаю с ипотекой, одобрением и материнским капиталом</li>
+        <li class="reveal d5">За мной стоят 17 лет опыта и команда юристов DОМИАН</li>
+      </ul>
+      <p class="quote reveal">«Для меня каждая сделка — это история семьи, которая начинает новую главу. Я отвечаю за то, чтобы она началась спокойно».</p>
+      <p class="sign reveal">— Елена Алиева</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ УСЛУГИ ============ -->
+<section id="services">
+  <div class="container">
+    <div class="head-row">
+      <div><span class="eyebrow reveal">Услуги</span><h2 class="reveal d1">Решаю любую задачу <em>с квартирой</em></h2></div>
+      <p class="lead reveal d2" style="max-width:420px">Каждую услугу можно взять отдельно, а можно доверить мне всю сделку целиком.</p>
+    </div>
+    <div class="services">
+      <article class="service featured reveal" data-tilt><span class="n">01</span><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6M9 10h.01M15 10h.01"/></svg></div><h3>Новостройки</h3><p>Помогу выбрать ЖК и квартиру, сравню застройщиков, проверю сроки сдачи и условия договора.</p><span class="tag">Подберу лучшие варианты</span></article>
+      <article class="service reveal d1" data-tilt><span class="n">02</span><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4M9 9h2M13 9h2M9 13h2M13 13h2"/></svg></div><h3>Вторичное жильё</h3><p>Подбор квартиры по вашим условиям, просмотры, торг с продавцом и безопасная сделка.</p></article>
+      <article class="service reveal d2" data-tilt><span class="n">03</span><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v18M17 7.5C17 5.6 14.8 4.5 12 4.5S7 5.6 7 7.5 9 10.4 12 11s5 1.6 5 3.5-2.2 3.5-5 3.5-5-1.1-5-3"/></svg></div><h3>Продажа квартиры</h3><p>Оценю рыночную цену, подготовлю объект и рекламу, найду покупателя и проведу сделку.</p></article>
+      <article class="service reveal" data-tilt><span class="n">04</span><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/></svg></div><h3>Ипотека и одобрение</h3><p>Подам заявки в несколько банков, помогу получить одобрение и выбрать выгодные условия.</p></article>
+      <article class="service reveal d1" data-tilt><span class="n">05</span><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 20c0-2 1-3.8 2-4.5 2.2 0 4 1.8 4 4.5"/></svg></div><h3>Материнский капитал</h3><p>Расскажу, как использовать маткапитал при покупке, и подготовлю документы для Соцфонда.</p></article>
+      <article class="service reveal d2" data-tilt><span class="n">06</span><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 8h13l-3-3M20 16H7l3 3"/></svg></div><h3>Обмен квартиры</h3><p>Продажа и покупка в одной связке: переедете в новую квартиру без промежуточной аренды.</p></article>
+    </div>
+    <div class="services" style="grid-template-columns:1fr;margin-top:22px">
+      <article class="service reveal" data-tilt style="display:flex;gap:28px;align-items:center;flex-wrap:wrap"><div class="icon" style="margin:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><div style="flex:1;min-width:240px"><h3>Юридическая проверка</h3><p>Проверяю историю квартиры, собственников, обременения и долги. Вместе с юристами DОМИАН закрываю риски, о которых покупатель обычно даже не знает.</p></div><a href="#contacts" class="btn btn-ghost btn-small" style="position:relative">Проверить объект</a></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ СЕВЕРНЫЙ ============ -->
+<section style="padding-top:20px">
+  <div class="container">
+    <div class="district reveal" id="district">
+      <div>
+        <span class="eyebrow">Моя специализация</span>
+        <h2>Северный — <em>мой район</em></h2>
+        <p class="lead">Я знаю Северный жилой массив до каждого квартала: какие дома лучше, где удобнее школы и сады, какие ЖК растут в цене и где не стоит покупать.</p>
+        <ul>
+          <li>Цены по каждому кварталу</li><li>Новые ЖК и проверенные застройщики</li><li>Школы, сады, транспорт</li><li>Дома, которые лучше обойти стороной</li>
+        </ul>
+        <a href="#quiz" class="btn btn-dark" style="margin-top:36px;background:#fff;color:var(--ink)" data-magnetic>Подобрать в Северном</a>
+      </div>
+      <svg class="map-draw" viewBox="0 0 500 420" aria-label="Схема Северного жилого массива">
+        <g>
+          <rect class="blk" x="60" y="70" width="70" height="46" rx="4"/><rect class="blk" x="150" y="62" width="90" height="54" rx="4"/><rect class="blk" x="270" y="80" width="64" height="40" rx="4"/><rect class="blk" x="360" y="60" width="86" height="60" rx="4"/>
+          <rect class="blk" x="60" y="150" width="96" height="60" rx="4"/><rect class="blk" x="186" y="150" width="70" height="66" rx="4"/><rect class="blk" x="364" y="160" width="82" height="50" rx="4"/>
+          <rect class="blk" x="70" y="250" width="74" height="70" rx="4"/><rect class="blk" x="176" y="260" width="100" height="50" rx="4"/><rect class="blk" x="300" y="250" width="58" height="76" rx="4"/><rect class="blk" x="384" y="260" width="62" height="56" rx="4"/>
+        </g>
+        <path pathLength="1" class="road main" d="M10 132 C140 128 300 140 490 130"/>
+        <path pathLength="1" class="road main" d="M166 10 C170 140 160 280 172 410"/>
+        <path pathLength="1" class="road" d="M10 232 C150 236 330 226 490 238"/>
+        <path pathLength="1" class="road" d="M350 10 C352 150 345 280 356 410"/>
+        <path pathLength="1" class="road" d="M260 10 C266 120 280 200 290 410"/>
+        <path pathLength="1" class="road" d="M10 340 C160 336 330 346 490 334"/>
+        <path pathLength="1" class="zone" d="M40 50 L470 40 L480 230 L440 380 L50 390 L30 220 Z"/>
+        <g transform="translate(300 175)"><g class="pin">
+          <circle class="ring" cx="0" cy="0" r="10"/>
+          <path d="M0 0 C-14 -14 -14 -34 0 -34 C14 -34 14 -14 0 0 Z" fill="#D7BC8A"/>
+          <circle cx="0" cy="-22" r="5" fill="#1E1F23"/>
+        </g></g>
+        <text x="40" y="410">СЕВЕРНЫЙ · РОСТОВ-НА-ДОНУ</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ЭТАПЫ ============ -->
+<section id="process">
+  <div class="container">
+    <span class="eyebrow reveal">Как мы работаем</span>
+    <h2 class="reveal d1">Пять шагов <em>до ключей</em></h2>
+    <p class="lead reveal d2" style="margin-bottom:64px">Вы всегда знаете, что происходит со сделкой и что будет дальше. Никаких сюрпризов.</p>
+    <div class="steps" id="steps">
+      <div class="steps-line"><i></i></div>
+      <div class="step"><div class="dot">1</div><div><h3>Знакомство</h3><p>Бесплатная консультация: обсуждаем задачу, бюджет и сроки.</p></div></div>
+      <div class="step"><div class="dot">2</div><div><h3>Подбор и оценка</h3><p>Отбираю варианты, организую просмотры, оцениваю вашу квартиру.</p></div></div>
+      <div class="step"><div class="dot">3</div><div><h3>Деньги и проверка</h3><p>Ипотека, маткапитал, юридическая проверка объекта и продавца.</p></div></div>
+      <div class="step"><div class="dot">4</div><div><h3>Сделка</h3><p>Договор, безопасные расчёты, регистрация права собственности.</p></div></div>
+      <div class="step"><div class="dot">5</div><div><h3>Ключи</h3><p>Приёмка квартиры и передача ключей. Вы дома!</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ КВИЗ ============ -->
+<section id="quiz" style="padding-top:20px">
+  <div class="container">
+    <div class="quiz-wrap reveal">
+      <div class="quiz-side">
+        <img src="img/thinking.jpg" alt="Елена Алиева подбирает варианты" loading="lazy">
+        <div class="note"><b>Подборка за 1 минуту</b>Ответьте на 4 вопроса, и я пришлю подходящие варианты лично вам.</div>
+      </div>
+      <form class="quiz" id="quizForm" novalidate>
+        <div class="quiz-top"><span id="qCount">Вопрос 1 из 5</span><span id="qPct">20%</span></div>
+        <div class="quiz-bar"><i id="qBar"></i></div>
+
+        <div class="q-step active" data-q="Что ищете">
+          <h3>Что вас интересует?</h3>
+          <div class="options">
+            <button type="button" class="opt"><span class="r"></span>Квартира в новостройке</button>
+            <button type="button" class="opt"><span class="r"></span>Вторичное жильё</button>
+            <button type="button" class="opt"><span class="r"></span>Продать квартиру</button>
+            <button type="button" class="opt"><span class="r"></span>Обменять квартиру</button>
+          </div>
+        </div>
+        <div class="q-step" data-q="Комнат">
+          <h3>Сколько комнат нужно?</h3>
+          <div class="options">
+            <button type="button" class="opt"><span class="r"></span>Студия</button>
+            <button type="button" class="opt"><span class="r"></span>1 комната</button>
+            <button type="button" class="opt"><span class="r"></span>2 комнаты</button>
+            <button type="button" class="opt"><span class="r"></span>3 комнаты и больше</button>
+          </div>
+        </div>
+        <div class="q-step" data-q="Бюджет">
+          <h3>Какой бюджет рассматриваете?</h3>
+          <div class="options">
+            <button type="button" class="opt"><span class="r"></span>До 4 млн ₽</button>
+            <button type="button" class="opt"><span class="r"></span>4–6 млн ₽</button>
+            <button type="button" class="opt"><span class="r"></span>6–9 млн ₽</button>
+            <button type="button" class="opt"><span class="r"></span>Больше 9 млн ₽</button>
+          </div>
+        </div>
+        <div class="q-step" data-q="Оплата">
+          <h3>Как планируете оплачивать?</h3>
+          <div class="options">
+            <button type="button" class="opt"><span class="r"></span>Ипотека</button>
+            <button type="button" class="opt"><span class="r"></span>Материнский капитал + ипотека</button>
+            <button type="button" class="opt"><span class="r"></span>Собственные средства</button>
+            <button type="button" class="opt"><span class="r"></span>Продажа моей квартиры</button>
+          </div>
+        </div>
+        <div class="q-step" data-q="Контакты">
+          <h3>Куда прислать подборку?</h3>
+          <label class="field"><span>Ваше имя</span><input name="name" autocomplete="given-name" placeholder="Например, Анна"></label>
+          <label class="field"><span>Телефон</span><input name="phone" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" data-phone></label>
+          <p class="privacy">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+        </div>
+
+        <div class="quiz-nav">
+          <button type="button" class="back" id="qBack" hidden>← Назад</button>
+          <button type="button" class="btn btn-dark" id="qNext" data-magnetic>Далее <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ КАЛЬКУЛЯТОР ============ -->
+<section id="calc">
+  <div class="container">
+    <span class="eyebrow reveal">Калькулятор</span>
+    <h2 class="reveal d1">Сколько будет <em>платёж по ипотеке?</em></h2>
+    <p class="lead reveal d2" style="margin-bottom:50px">Двигайте ползунки и смотрите примерный ежемесячный платёж. Точные условия подберу под вас в разных банках.</p>
+    <div class="calc">
+      <div class="calc-box reveal">
+        <div class="chips" id="programs">
+          <button type="button" class="chip sel" data-rate="6">Семейная · 6%</button>
+          <button type="button" class="chip" data-rate="20">Рыночная · 20%</button>
+        </div>
+        <div class="range"><div class="range-top"><span>Стоимость квартиры</span><output id="oPrice"></output></div><input type="range" id="price" min="2000000" max="20000000" step="100000" value="6500000"></div>
+        <div class="range"><div class="range-top"><span>Первоначальный взнос</span><output id="oDown"></output></div><input type="range" id="down" min="20" max="90" step="1" value="20"></div>
+        <div class="range"><div class="range-top"><span>Срок</span><output id="oYears"></output></div><input type="range" id="years" min="5" max="30" step="1" value="25"></div>
+        <div class="range" style="margin-bottom:0"><div class="range-top"><span>Ставка</span><output id="oRate"></output></div><input type="range" id="rate" min="0.1" max="30" step="0.1" value="6"></div>
+      </div>
+      <div class="calc-res reveal d2">
+        <small>ЕЖЕМЕСЯЧНЫЙ ПЛАТЁЖ</small>
+        <div class="big" id="monthly">0 ₽</div>
+        <div class="res-rows">
+          <div><span>Сумма кредита</span><b id="credit"></b></div>
+          <div><span>Первоначальный взнос</span><b id="downSum"></b></div>
+          <div><span>Переплата</span><b id="over"></b></div>
+        </div>
+        <a href="#contacts" class="btn btn-dark" id="calcCta" data-magnetic>Получить одобрение</a>
+        <p class="disclaimer">Расчёт примерный и не является офертой банка. Условия программ (ставки, лимиты, кто может получить) уточняйте на консультации.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DОМИАН ============ -->
+<section style="padding-top:0">
+  <div class="container">
+    <div class="company">
+      <div class="years reveal"><span data-count="17">0</span><small>лет на рынке</small></div>
+      <div>
+        <span class="eyebrow reveal">Компания</span>
+        <h2 class="reveal d1">Я работаю в <em>DОМИАН</em> — одной из крупнейших компаний региона</h2>
+        <p class="lead reveal d2">DОМИАН 17 лет работает на рынке недвижимости и входит в число самых крупных и успешных компаний Ростова-на-Дону и Ростовской области. Вы получаете личное внимание агента, а за ним стоят ресурсы и опыт большой команды.</p>
+        <div class="pillars">
+          <div class="reveal d2"><b>Большая база</b>объектов в Ростове и области</div>
+          <div class="reveal d3"><b>Свои юристы</b>и ипотечные специалисты</div>
+          <div class="reveal d4"><b>17 лет</b>репутации на рынке</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ГАЛЕРЕЯ ============ -->
+<div class="gallery" aria-label="Фотографии Елены Алиевой">
+  <div class="g-track" id="gTrack">
+    <div class="g-item"><img src="img/portrait.jpg" alt="Елена Алиева" loading="lazy"></div>
+    <div class="g-item"><img src="img/sofa.jpg" alt="Елена Алиева" loading="lazy"></div>
+    <div class="g-item"><img src="img/grey.jpg" alt="Елена Алиева" loading="lazy"></div>
+    <div class="g-item"><img src="img/wood.jpg" alt="Елена Алиева" loading="lazy"></div>
+    <div class="g-item"><img src="img/magazine.jpg" alt="Елена Алиева" loading="lazy"></div>
+    <div class="g-item"><img src="img/chair.jpg" alt="Елена Алиева" loading="lazy"></div>
+    <div class="g-item"><img src="img/armchair.jpg" alt="Елена Алиева" loading="lazy"></div>
+  </div>
+</div>
+
+<!-- ============ ОТЗЫВЫ (пока пустые) ============ -->
+<section id="reviews" style="padding-top:0">
+  <div class="container">
+    <span class="eyebrow reveal">Отзывы</span>
+    <h2 class="reveal d1">Что говорят <em>клиенты</em></h2>
+    <p class="lead reveal d2" style="margin-bottom:50px">Скоро здесь появятся отзывы семей, с которыми мы прошли путь до ключей.</p>
+    <!-- Чтобы добавить отзыв: замените блок .ph текстом в <p>, а .who — именем клиента -->
+    <div class="reviews">
+      <div class="review reveal"><div class="qm">“</div><div class="ph"><i></i><i></i><i></i></div><div class="who"><span class="av"></span>Отзыв скоро появится</div></div>
+      <div class="review reveal d1"><div class="qm">“</div><div class="ph"><i></i><i></i><i></i></div><div class="who"><span class="av"></span>Отзыв скоро появится</div></div>
+      <div class="review reveal d2"><div class="qm">“</div><div class="ph"><i></i><i></i><i></i></div><div class="who"><span class="av"></span>Отзыв скоро появится</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" style="padding-top:0">
+  <div class="container faq-grid">
+    <div>
+      <span class="eyebrow reveal">Вопросы</span>
+      <h2 class="reveal d1">Частые <em>вопросы</em></h2>
+      <p class="lead reveal d2">Не нашли ответ? Напишите мне, отвечу лично.</p>
+      <a href="#contacts" class="btn btn-ghost reveal d3" style="margin-top:30px">Задать вопрос</a>
+    </div>
+    <div class="faq">
+      <details class="reveal"><summary>Сколько стоят ваши услуги?<i></i></summary><p class="ans">Стоимость зависит от задачи: покупка, продажа, обмен или только проверка документов. Первая консультация бесплатная. На ней я разберу вашу ситуацию и назову точную стоимость, без скрытых доплат.</p></details>
+      <details class="reveal d1"><summary>Поможете получить ипотеку, если банки отказали?<i></i></summary><p class="ans">Да. Разберусь в причине отказа, подготовлю документы и подам заявки сразу в несколько банков. Это заметно повышает шансы на одобрение.</p></details>
+      <details class="reveal d2"><summary>Можно купить квартиру с материнским капиталом?<i></i></summary><p class="ans">Да, маткапитал можно направить на первый взнос или погашение ипотеки. Я подскажу, какие объекты подходят, и помогу с документами для Соцфонда.</p></details>
+      <details class="reveal d3"><summary>Как вы проверяете квартиру перед покупкой?<i></i></summary><p class="ans">Проверяю выписку из ЕГРН, историю перехода прав, собственников и прописанных, обременения, долги и судебные споры. С застройщиками проверяю разрешительную документацию и условия договора.</p></details>
+      <details class="reveal d4"><summary>Работаете только с Северным районом?<i></i></summary><p class="ans">Нет, я работаю по всему Ростову-на-Дону и Ростовской области. Северный — район, который я знаю особенно хорошо.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ КОНТАКТЫ ============ -->
+<section id="contacts" style="padding-top:0">
+  <div class="container">
+    <div class="contact">
+      <div class="c-card reveal">
+        <span class="eyebrow" style="color:var(--gold-2)">Контакты</span>
+        <h2>Давайте <em>обсудим</em> вашу задачу</h2>
+        <p class="lead">Позвоните или напишите в удобный мессенджер. Консультация бесплатная и ни к чему вас не обязывает.</p>
+        <div class="c-list">
+          <a class="c-link" href="tel:+79289675655"><span class="ci"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><span><small>Телефон</small><b>+7 (928) 967-56-55</b></span></a>
+          <a class="c-link" href="#" data-max><span class="ci" style="font-weight:800;font-size:13px">MAX</span><span><small>Мессенджер MAX</small><b>+7 (928) 967-56-55</b></span></a>
+          <a class="c-link" href="https://t.me/Letidasa" target="_blank" rel="noopener"><span class="ci"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M21.5 4.3 18.4 19c-.2 1-.9 1.3-1.7.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.2 12.9l-4.7-1.5c-1-.3-1-1 .2-1.5L20.2 2.9c.9-.3 1.6.2 1.3 1.4z"/></svg></span><span><small>Telegram</small><b>@Letidasa</b></span></a>
+        </div>
+        <p style="color:rgba(255,255,255,.55);font-size:14px">Офис DОМИАН: Ростов-на-Дону, пр. Космонавтов, 32в</p>
+      </div>
+      <form class="c-form reveal d2" id="contactForm" novalidate>
+        <h3>Оставьте заявку</h3>
+        <p>Свяжусь с вами в течение рабочего дня.</p>
+        <label class="field"><span>Ваше имя</span><input name="name" autocomplete="given-name" placeholder="Как к вам обращаться"></label>
+        <label class="field"><span>Телефон</span><input name="phone" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" data-phone></label>
+        <label class="field"><span>Задача (необязательно)</span><textarea name="msg" placeholder="Например: хочу 2-комнатную в Северном, есть одобренная ипотека"></textarea></label>
+        <button class="btn btn-dark shine" type="submit" data-magnetic>Отправить в MAX <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <p class="privacy">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+      </form>
+    </div>
+    <div class="map reveal">
+      <iframe title="Офис на карте" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=39.7020%2C47.2920%2C39.7200%2C47.3000&layer=mapnik&marker=47.2961%2C39.7139"></iframe>
+      <div class="addr"><b>Офис DОМИАН</b>Ростов-на-Дону, пр. Космонавтов, 32в<br><a class="btn btn-dark btn-small" style="margin-top:14px" href="https://yandex.ru/maps/?rtext=~47.2961%2C39.7139&rtt=auto" target="_blank" rel="noopener">Построить маршрут</a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container foot">
+    <div class="logo"><span class="logo-mark">ЕА</span><span><b>Елена Алиева</b><small>агент по недвижимости · DОМИАН</small></span></div>
+    <div>© <span id="year"></span> Елена Алиева. Ростов-на-Дону</div>
+    <a class="phone" href="tel:+79289675655">+7 (928) 967-56-55</a>
+  </div>
+</footer>
+
+<!-- Плавающая кнопка связи -->
+<div class="fab" id="fab">
+  <div class="fab-list">
+    <a href="https://t.me/Letidasa" target="_blank" rel="noopener"><span class="i" style="background:#2AABEE">TG</span>Telegram</a>
+    <a href="#" data-max><span class="i" style="background:linear-gradient(135deg,#3B5BFF,#9B3BFF)">M</span>Написать в MAX</a>
+    <a href="tel:+79289675655"><span class="i" style="background:var(--ink)">☎</span>Позвонить</a>
+  </div>
+  <button class="fab-main" id="fabBtn" aria-label="Связаться"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg></button>
+</div>
+<a href="#top" class="toTop" id="toTop" aria-label="Наверх"><svg class="ringp" viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+
+<!-- Окно после отправки заявки -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="modal-box">
+    <button class="close" id="mClose" aria-label="Закрыть">×</button>
+    <svg class="ok" viewBox="0 0 76 76"><circle pathLength="1" cx="38" cy="38" r="36"/><path pathLength="1" d="M24 39l10 10 19-21"/></svg>
+    <h3 id="mTitle">Заявка готова!</h3>
+    <p id="mText">Текст заявки скопирован. Откройте MAX, найдите Елену по номеру <b>+7 928 967-56-55</b> и вставьте сообщение.</p>
+    <div class="acts">
+      <a class="btn btn-dark" href="#" data-max>Открыть MAX</a>
+      <a class="btn btn-ghost" id="mTg" href="https://t.me/Letidasa" target="_blank" rel="noopener">Или отправить в Telegram</a>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ===== НАСТРОЙКИ =====
+   MAX_URL — ссылка на профиль Елены в MAX (Профиль → Поделиться → Скопировать ссылку).
+   Пока её нет, кнопка открывает MAX, а текст заявки копируется в буфер обмена. */
+const MAX_URL = 'https://max.ru/';
+const TG_USER = 'Letidasa';
+
+const $ = (s, c = document) => c.querySelector(s);
+const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+$('#year').textContent = new Date().getFullYear();
+
+/* --- Чертёж новостроек на фоне --- */
+(function blueprint(){
+  const svg = $('#bp'), NS = 'http://www.w3.org/2000/svg', G = 640;
+  let d = 0;
+  const add = (tag, attrs, cls = 'bp-line') => {
+    const el = document.createElementNS(NS, tag);
+    for (const k in attrs) el.setAttribute(k, attrs[k]);
+    if (tag !== 'text') { el.setAttribute('pathLength', 1); el.setAttribute('class', cls); el.style.animationDelay = (d += 0.012).toFixed(2) + 's'; }
+    else el.setAttribute('class', 'bp-text');
+    svg.appendChild(el); return el;
+  };
+  const tower = (x, w, floors, fh, opts = {}) => {
+    const top = G - floors * fh;
+    add('rect', { x, y: top, width: w, height: floors * fh });
+    for (let f = 1; f < floors; f++) add('line', { x1: x, y1: top + f * fh, x2: x + w, y2: top + f * fh }, 'bp-line bp-thin');
+    const cols = Math.floor(w / 22);
+    for (let c = 0; c < cols; c++) {
+      const wx = x + 8 + c * ((w - 16) / cols);
+      for (let f = 0; f < floors; f += opts.skip || 1) add('rect', { x: wx + 2, y: top + f * fh + fh * .28, width: (w - 16) / cols - 6, height: fh * .45 }, 'bp-line bp-thin');
+    }
+    if (opts.roof) add('path', { d: `M${x - 6} ${top} H${x + w + 6} M${x + w * .3} ${top} V${top - 18} H${x + w * .7} V${top}` });
+    // размерная линия
+    add('path', { d: `M${x + w + 16} ${top} V${G} M${x + w + 11} ${top} H${x + w + 21} M${x + w + 11} ${G} H${x + w + 21}` }, 'bp-line bp-gold');
+    const t = add('text', { x: x + w + 24, y: top + 14 }); t.textContent = '+' + (floors * 3).toFixed(1).replace('.', ',');
+  };
+  tower(70, 120, 18, 22, { roof: 1, skip: 1 });
+  tower(230, 170, 25, 21, { roof: 1, skip: 1 });
+  tower(470, 110, 14, 22, { roof: 1 });
+  tower(1010, 150, 22, 22, { roof: 1 });
+  tower(1200, 120, 27, 21, { roof: 1 });
+  tower(1380, 160, 16, 22, { roof: 1 });
+  // строящийся дом и кран
+  add('rect', { x: 640, y: G - 200, width: 200, height: 200 });
+  for (let i = 0; i < 8; i++) add('line', { x1: 640, y1: G - 25 * i, x2: 840, y2: G - 25 * i }, 'bp-line bp-thin');
+  for (let i = 0; i <= 8; i++) add('line', { x1: 640 + 25 * i, y1: G - 200, x2: 640 + 25 * i, y2: G }, 'bp-line bp-thin');
+  add('path', { d: `M880 ${G} V140 M896 ${G} V140 M880 140 H896` }, 'bp-line bp-gold');
+  for (let y = G; y > 150; y -= 32) add('path', { d: `M880 ${y} L896 ${y - 32} M896 ${y} L880 ${y - 32}` }, 'bp-line bp-thin');
+  add('path', { d: 'M700 140 H1000 M700 140 V156 H1000 V140 M888 140 L888 100 L700 140 M888 100 L1000 140' }, 'bp-line bp-gold');
+  add('path', { d: 'M960 156 V300 M952 300 H968 V318 H952 Z' });
+  // земля и оси
+  add('path', { d: `M0 ${G} H1600` });
+  add('path', { d: `M0 ${G + 12} H1600` }, 'bp-line bp-thin');
+  for (let x = 40; x < 1600; x += 160) { add('circle', { cx: x, cy: G + 34, r: 9 }, 'bp-line bp-thin'); const t = add('text', { x: x - 3.5, y: G + 38 }); t.textContent = String.fromCharCode(1040 + (x / 160 | 0)); }
+  const t = add('text', { x: 1330, y: 60 }); t.textContent = 'ФАСАД 1–12 · М 1:200';
+})();
+
+/* --- Прелоадер и заголовок по словам --- */
+(function(){
+  const h = $('#heroTitle');
+  const wrapWords = node => [...node.childNodes].forEach(n => {
+    if (n.nodeType === 3) {
+      const frag = document.createDocumentFragment();
+      n.textContent.split(/(\s+)/).forEach(p => {
+        if (!p) return;
+        if (/^\s+$/.test(p)) { frag.appendChild(document.createTextNode(' ')); return; }
+        const w = document.createElement('span'); w.className = 'w';
+        const s = document.createElement('span'); s.textContent = p; w.appendChild(s); frag.appendChild(w);
+      });
+      n.replaceWith(frag);
+    } else wrapWords(n);
+  });
+  wrapWords(h);
+  $$('.w > span', h).forEach((s, i) => s.style.transitionDelay = (0.25 + i * 0.07) + 's');
+  const done = () => { $('#preloader').classList.add('done'); document.body.classList.add('loaded'); };
+  const img = $('#heroImg'), t0 = performance.now();
+  const ready = () => setTimeout(done, reduce ? 0 : Math.max(0, 900 - (performance.now() - t0)));
+  if (img.complete) ready(); else { img.addEventListener('load', ready); img.addEventListener('error', ready); }
+  setTimeout(done, 2200); // на случай медленного интернета
+})();
+
+/* --- Шапка, прогресс, кнопка наверх, параллакс --- */
+const header = $('#header'), progress = $('#progress'), toTop = $('#toTop'), ringC = $('#toTop circle');
+const heroImg = $('#heroImg'), bpSvg = $('.blueprint svg');
+let ticking = false;
+function onScroll(){
+  const y = scrollY, max = document.documentElement.scrollHeight - innerHeight, p = max > 0 ? y / max : 0;
+  header.classList.toggle('scrolled', y > 30);
+  progress.style.transform = `scaleX(${p})`;
+  toTop.classList.toggle('show', y > 700);
+  ringC.style.strokeDashoffset = 151 - 151 * p;
+  if (!reduce) {
+    bpSvg.style.setProperty('--py', (y * 0.08).toFixed(1) + 'px');
+    if (y < innerHeight) heroImg.style.setProperty('--iy', (y * -0.08).toFixed(1) + 'px');
+    $$('[data-parallax]').forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.bottom > 0 && r.top < innerHeight) el.style.transform = `translateY(${((r.top - innerHeight / 2) * -el.dataset.parallax).toFixed(1)}px) scale(1.12)`;
+    });
+  }
+  ticking = false;
+}
+addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(onScroll); ticking = true; } }, { passive: true });
+onScroll();
+
+/* --- Мобильное меню --- */
+const burger = $('#burger'), mm = $('#mobileMenu');
+burger.addEventListener('click', () => { const o = mm.classList.toggle('open'); burger.classList.toggle('open', o); document.body.style.overflow = o ? 'hidden' : ''; });
+$$('a', mm).forEach(a => a.addEventListener('click', () => { mm.classList.remove('open'); burger.classList.remove('open'); document.body.style.overflow = ''; }));
+
+/* --- Появление при прокрутке и счётчики --- */
+const countUp = el => {
+  const end = +el.dataset.count, dur = 1800, t0 = performance.now();
+  const step = t => { const k = Math.min((t - t0) / dur, 1), e = 1 - Math.pow(1 - k, 4); el.textContent = Math.round(end * e); if (k < 1) requestAnimationFrame(step); };
+  requestAnimationFrame(step);
+};
+const io = new IntersectionObserver(entries => entries.forEach(e => {
+  if (!e.isIntersecting) return;
+  e.target.classList.add('in');
+  $$('[data-count]', e.target).forEach(countUp);
+  io.unobserve(e.target);
+}), { threshold: 0.18, rootMargin: '0px 0px -40px 0px' });
+$$('.reveal, .reveal-img, #steps, #district').forEach(el => io.observe(el));
+
+/* --- Подсветка и наклон карточек услуг --- */
+if (matchMedia('(pointer:fine)').matches && !reduce) {
+  $$('[data-tilt]').forEach(c => {
+    c.addEventListener('mousemove', e => {
+      const r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+      c.style.setProperty('--mx', x * 100 + '%'); c.style.setProperty('--my', y * 100 + '%');
+      c.style.transform = `perspective(900px) rotateX(${(0.5 - y) * 5}deg) rotateY(${(x - 0.5) * 6}deg) translateY(-4px)`;
+    });
+    c.addEventListener('mouseleave', () => c.style.transform = '');
+  });
+  /* магнитные кнопки */
+  $$('[data-magnetic]').forEach(b => {
+    b.addEventListener('mousemove', e => { const r = b.getBoundingClientRect(); b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .18}px,${(e.clientY - r.top - r.height / 2) * .3}px)`; });
+    b.addEventListener('mouseleave', () => b.style.transform = '');
+  });
+  /* курсор */
+  const cur = $('#cursor'), dot = $('#cursorDot'); let cx = 0, cy = 0, tx = 0, ty = 0;
+  addEventListener('mousemove', e => { tx = e.clientX; ty = e.clientY; dot.style.transform = `translate(${tx}px,${ty}px) translate(-50%,-50%)`; cur.style.opacity = dot.style.opacity = 1; });
+  document.addEventListener('mouseleave', () => cur.style.opacity = dot.style.opacity = 0);
+  (function loop(){ cx += (tx - cx) * .16; cy += (ty - cy) * .16; cur.style.transform = `translate(${cx}px,${cy}px) translate(-50%,-50%)`; requestAnimationFrame(loop); })();
+  document.addEventListener('mouseover', e => cur.classList.toggle('big', !!e.target.closest('a,button,input,textarea,.g-item,summary')));
+}
+
+/* --- Маска телефона --- */
+$$('[data-phone]').forEach(inp => inp.addEventListener('input', () => {
+  let d = inp.value.replace(/\D/g, '');
+  if (d.startsWith('8')) d = '7' + d.slice(1);
+  if (!d.startsWith('7')) d = '7' + d;
+  d = d.slice(0, 11);
+  const p = [d.slice(1, 4), d.slice(4, 7), d.slice(7, 9), d.slice(9, 11)];
+  inp.value = '+7' + (p[0] ? ` (${p[0]}` : '') + (p[0].length === 3 ? ')' : '') + (p[1] ? ' ' + p[1] : '') + (p[2] ? '-' + p[2] : '') + (p[3] ? '-' + p[3] : '');
+}));
+const validPhone = v => v.replace(/\D/g, '').length === 11;
+
+/* --- Отправка заявки в MAX --- */
+const modal = $('#modal');
+function openMax(e){ if (e) e.preventDefault(); window.open(MAX_URL, '_blank', 'noopener'); }
+$$('[data-max]').forEach(a => a.addEventListener('click', openMax));
+async function sendLead(text){
+  try { await navigator.clipboard.writeText(text); }
+  catch { const t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); } catch {} t.remove(); }
+  $('#mTg').href = `https://t.me/${TG_USER}?text=${encodeURIComponent(text)}`;
+  modal.classList.add('open');
+}
+const closeModal = () => modal.classList.remove('open');
+$('#mClose').addEventListener('click', closeModal);
+modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+const shake = el => { el.focus(); el.animate([{ transform: 'translateX(0)' }, { transform: 'translateX(-8px)' }, { transform: 'translateX(8px)' }, { transform: 'translateX(0)' }], { duration: 300 }); el.style.borderColor = 'var(--red)'; setTimeout(() => el.style.borderColor = '', 1600); };
+
+$('#contactForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const f = e.target, name = f.name.value.trim(), phone = f.phone.value.trim(), msg = f.msg.value.trim();
+  if (!name) return shake(f.name);
+  if (!validPhone(phone)) return shake(f.phone);
+  sendLead(`Здравствуйте, Елена! Заявка с сайта.\nИмя: ${name}\nТелефон: ${phone}` + (msg ? `\nЗадача: ${msg}` : ''));
+  f.reset();
+});
+
+/* --- Квиз --- */
+(function quiz(){
+  const form = $('#quizForm'), steps = $$('.q-step', form), next = $('#qNext'), back = $('#qBack');
+  let i = 0; const answers = {};
+  const render = () => {
+    steps.forEach((s, k) => s.classList.toggle('active', k === i));
+    const pct = Math.round((i + 1) / steps.length * 100);
+    $('#qBar').style.width = pct + '%'; $('#qPct').textContent = pct + '%';
+    $('#qCount').textContent = `Вопрос ${i + 1} из ${steps.length}`;
+    back.hidden = i === 0;
+    next.firstChild.textContent = i === steps.length - 1 ? 'Получить подборку ' : 'Далее ';
+  };
+  steps.forEach(s => $$('.opt', s).forEach(o => o.addEventListener('click', () => {
+    $$('.opt', s).forEach(x => x.classList.remove('sel')); o.classList.add('sel');
+    answers[s.dataset.q] = o.textContent.trim();
+    setTimeout(() => { if (i < steps.length - 1) { i++; render(); } }, 320);
+  })));
+  next.addEventListener('click', () => {
+    const s = steps[i];
+    if (i < steps.length - 1) {
+      if (!answers[s.dataset.q]) { $$('.opt', s).forEach(o => o.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.03)' }, { transform: 'scale(1)' }], { duration: 300 })); return; }
+      i++; return render();
+    }
+    if (!form.name.value.trim()) return shake(form.name);
+    if (!validPhone(form.phone.value)) return shake(form.phone);
+    const lines = Object.entries(answers).map(([k, v]) => `${k}: ${v}`).join('\n');
+    sendLead(`Здравствуйте, Елена! Хочу подборку с сайта.\n${lines}\nИмя: ${form.name.value.trim()}\nТелефон: ${form.phone.value.trim()}`);
+  });
+  back.addEventListener('click', () => { if (i > 0) { i--; render(); } });
+  render();
+})();
+
+/* --- Ипотечный калькулятор --- */
+(function calc(){
+  const price = $('#price'), down = $('#down'), years = $('#years'), rate = $('#rate');
+  const rub = n => Math.round(n).toLocaleString('ru-RU') + ' ₽';
+  const fill = r => r.style.setProperty('--p', ((r.value - r.min) / (r.max - r.min) * 100) + '%');
+  const animateNum = (el, to) => {
+    const from = +(el.dataset.v || 0), t0 = performance.now(); el.dataset.v = to;
+    const st = t => { const k = Math.min((t - t0) / 500, 1); el.textContent = rub(from + (to - from) * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(st); };
+    requestAnimationFrame(st);
+  };
+  const upd = () => {
+    const P = +price.value, D = P * down.value / 100, S = P - D, n = years.value * 12, r = rate.value / 1200;
+    const m = r ? S * r / (1 - Math.pow(1 + r, -n)) : S / n;
+    $('#oPrice').textContent = rub(P); $('#oDown').textContent = down.value + '% · ' + rub(D);
+    $('#oYears').textContent = years.value + ' лет'; $('#oRate').textContent = (+rate.value).toFixed(1).replace('.', ',') + '%';
+    animateNum($('#monthly'), m);
+    $('#credit').textContent = rub(S); $('#downSum').textContent = rub(D); $('#over').textContent = rub(m * n - S);
+    [price, down, years, rate].forEach(fill);
+  };
+  [price, down, years, rate].forEach(r => r.addEventListener('input', () => { if (r === rate) $$('#programs .chip').forEach(c => c.classList.remove('sel')); upd(); }));
+  $$('#programs .chip').forEach(c => c.addEventListener('click', () => { $$('#programs .chip').forEach(x => x.classList.remove('sel')); c.classList.add('sel'); rate.value = c.dataset.rate; upd(); }));
+  upd();
+})();
+
+/* --- Галерея: бесконечная лента --- */
+$('#gTrack').innerHTML += $('#gTrack').innerHTML;
+
+/* --- Плавающая кнопка --- */
+$('#fabBtn').addEventListener('click', () => $('#fab').classList.toggle('open'));
+</script>
+</body>
+</html>
