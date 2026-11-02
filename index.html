@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Елена Алиева — агент по недвижимости в Ростове-на-Дону | DОМИАН</title>
-<meta name="description" content="Елена Алиева — топ-агент компании DОМИАН. Вторичное жильё и новостройки в Ростове-на-Дону. 5 лет опыта, более 500 сделок. Ипотека, материнский капитал, обмен, юридическая проверка.">
+<meta name="description" content="Елена Алиева — топ-агент компании DОМИАН. Вторичное жильё и новостройки в Ростове-на-Дону. В недвижимости с 2022 года, более 500 сделок. Ипотека, материнский капитал, обмен, юридическая проверка.">
 <meta property="og:title" content="Елена Алиева — агент по недвижимости в Ростове-на-Дону">
 <meta property="og:description" content="Вторичка и новостройки без риска. 500+ сделок, 300+ семей с ключами.">
 <meta property="og:image" content="img/hero.jpg">
@@ -174,7 +174,7 @@ header.scrolled{background:rgba(250,248,245,.86);backdrop-filter:blur(14px);-web
 .about-photos .p2{right:0;bottom:0;width:48%;height:52%;border:8px solid var(--bg)}
 .about-photos img{width:100%;height:100%;object-fit:cover;object-position:50% 15%}
 .about-photos .exp{position:absolute;right:6%;top:6%;width:132px;height:132px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;text-align:center;line-height:1.1;z-index:2}
-.about-photos .exp b{font-family:var(--serif);font-size:46px;display:block;color:var(--gold-2)}
+.about-photos .exp b{font-family:var(--serif);font-size:36px;line-height:1.1;display:block;color:var(--gold-2)}
 .about-photos .exp small{font-size:11px;letter-spacing:.12em;text-transform:uppercase}
 .rotating{position:absolute;inset:-14px;animation:spin 18s linear infinite}
 .rotating text{fill:var(--gold);font:600 9.5px var(--sans);letter-spacing:.32em;text-transform:uppercase}
@@ -440,7 +440,7 @@ footer{padding:60px 0 110px;color:var(--ink-3);font-size:14px}
   .services,.reviews,.pillars{grid-template-columns:1fr}
   .about-photos{height:480px}
   .about-photos .exp{width:108px;height:108px}
-  .about-photos .exp b{font-size:36px}
+  .about-photos .exp b{font-size:28px}
   .district{padding:44px 22px;border-radius:26px}
   .district ul{grid-template-columns:1fr}
   .quiz{padding:34px 22px}
@@ -506,7 +506,7 @@ footer{padding:60px 0 110px;color:var(--ink-3);font-size:14px}
         <a href="#contacts" class="btn btn-ghost" data-magnetic>Бесплатная консультация</a>
       </div>
       <div class="hero-facts">
-        <div><b>5 лет</b>опыта в сделках</div>
+        <div><b>С 2022</b>года в недвижимости</div>
         <div><b>500+</b>закрытых сделок</div>
         <div><b>2–3 мес.</b>средний срок сделки</div>
       </div>
@@ -531,7 +531,7 @@ footer{padding:60px 0 110px;color:var(--ink-3);font-size:14px}
 <section class="stats" id="stats">
   <div class="container">
     <div class="stats-grid">
-      <div class="stat reveal"><div class="num"><span data-count="5">0</span></div><p>лет помогаю с недвижимостью в Ростове</p></div>
+      <div class="stat reveal"><div class="num"><span data-count="2022" data-from="1990">2022</span></div><p>год, с которого я помогаю с недвижимостью в Ростове</p></div>
       <div class="stat reveal d1"><div class="num"><span data-count="500">0</span><sup>+</sup></div><p>успешно закрытых сделок</p></div>
       <div class="stat reveal d2"><div class="num"><span data-count="300">0</span><sup>+</sup></div><p>семей получили ключи от нового дома</p></div>
       <div class="stat reveal d3"><div class="num"><span data-count="17">0</span></div><p>лет на рынке компании DОМИАН</p></div>
@@ -547,7 +547,7 @@ footer{padding:60px 0 110px;color:var(--ink-3);font-size:14px}
       <div class="p2 reveal-img d3"><img src="img/armchair.jpg" alt="Елена Алиева в офисе" loading="lazy"></div>
       <div class="exp">
         <svg class="rotating" viewBox="0 0 160 160" aria-hidden="true"><defs><path id="circ" d="M80 80 m-66 0 a66 66 0 1 1 132 0 a66 66 0 1 1 -132 0"/></defs><text><textPath href="#circ">Елена Алиева • DОМИАН • Ростов-на-Дону • </textPath></text></svg>
-        <div><b>5</b><small>лет<br>опыта</small></div>
+        <div><small>с</small><b>2022</b><small>года</small></div>
       </div>
     </div>
     <div>
@@ -989,8 +989,8 @@ $$('a', mm).forEach(a => a.addEventListener('click', () => { mm.classList.remove
 
 /* --- Появление при прокрутке и счётчики --- */
 const countUp = el => {
-  const end = +el.dataset.count, dur = 1800, t0 = performance.now();
-  const step = t => { const k = Math.min((t - t0) / dur, 1), e = 1 - Math.pow(1 - k, 4); el.textContent = Math.round(end * e); if (k < 1) requestAnimationFrame(step); };
+  const end = +el.dataset.count, from = +(el.dataset.from || 0), dur = 1800, t0 = performance.now();
+  const step = t => { const k = Math.min((t - t0) / dur, 1), e = 1 - Math.pow(1 - k, 4); el.textContent = Math.round(from + (end - from) * e); if (k < 1) requestAnimationFrame(step); };
   requestAnimationFrame(step);
 };
 const io = new IntersectionObserver(entries => entries.forEach(e => {
