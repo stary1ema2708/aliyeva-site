@@ -184,6 +184,14 @@ header.scrolled{background:rgba(250,248,245,.86);backdrop-filter:blur(14px);-web
 .checks li::before{content:"";flex:none;width:26px;height:26px;margin-top:1px;border-radius:50%;background:var(--gold-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B08A4E' stroke-width='2.5'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/15px no-repeat}
 .quote{font-family:var(--serif);font-style:italic;font-size:26px;line-height:1.35;padding-left:24px;border-left:2px solid var(--gold);margin-top:6px}
 .sign{margin-top:14px;font-size:14px;color:var(--ink-3)}
+.words{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 4px}
+.words span{font-family:var(--serif);font-style:italic;font-size:22px;padding:6px 18px;border:1px solid var(--gold-2);border-radius:100px;color:var(--ink);background:rgba(255,255,255,.6)}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:0 0 34px}
+.facts div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;font-size:13.5px;color:var(--ink-2);line-height:1.35;transition:transform .4s var(--ease),box-shadow .4s}
+.facts div:hover{transform:translateY(-4px);box-shadow:0 16px 30px -18px rgba(30,31,35,.3)}
+.facts b{display:block;font-family:var(--serif);font-size:22px;font-weight:600;color:var(--ink);margin-bottom:4px}
+@media (min-width:1101px){.about-grid{align-items:start}.about-photos{position:sticky;top:120px}}
+@media (max-width:720px){.facts{grid-template-columns:1fr 1fr}.words span{font-size:19px}}
 
 /* ---------- Услуги ---------- */
 .head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:56px;flex-wrap:wrap}
@@ -492,7 +500,7 @@ footer{padding:60px 0 110px;color:var(--ink-3);font-size:14px}
     <div>
       <div class="badge-top"><b>ТОП</b> Лучшие агенты компании DОМИАН <span class="pulse" title="На связи сегодня"></span></div>
       <h1 id="heroTitle">Квартира в <em>Ростове-на-Дону</em> — без риска и лишних хлопот</h1>
-      <p class="lead">Я Елена Алиева, агент по недвижимости. Помогаю купить, продать или обменять квартиру на вторичном рынке и в новостройках. Беру на себя всё: от подбора и ипотеки до проверки документов и передачи ключей.</p>
+      <p class="lead">Я Елена Алиева, агент по недвижимости. Превращаю «слишком сложно» в «уже сделано»: помогаю купить, продать или обменять квартиру на вторичном рынке и в новостройках. Беру на себя всё — от подбора и ипотеки до документов, переговоров и передачи ключей.</p>
       <div class="hero-ctas">
         <a href="#quiz" class="btn btn-dark shine" data-magnetic>Подобрать квартиру <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a href="#contacts" class="btn btn-ghost" data-magnetic>Бесплатная консультация</a>
@@ -544,15 +552,23 @@ footer{padding:60px 0 110px;color:var(--ink-3);font-size:14px}
     </div>
     <div>
       <span class="eyebrow reveal">Обо мне</span>
-      <h2 class="reveal d1">Ваш личный эксперт <em>по недвижимости</em></h2>
-      <p class="lead reveal d2">Пять лет я каждый день работаю с квартирами в Ростове-на-Дону: от проверки документов до ключей. Я вхожу в число лучших агентов компании DОМИАН и за это время провела более 500 сделок. Моя задача — чтобы вы купили или продали квартиру выгодно, спокойно и без рисков.</p>
+      <h2 class="reveal d1">Превращаю «слишком сложно» <em>в «уже сделано»</em></h2>
+      <p class="lead reveal d2">До недвижимости я 8 лет руководила собственным бизнесом — детским клубом развития для малышей. Потом посвятила себя воспитанию троих детей и поняла: хочу снова расти профессионально. Недвижимость казалась мне слишком сложной, и я решила преодолеть этот страх. Оказалось, что опыт заботы о людях и организации сложных процессов здесь нужнее всего.</p>
+      <p class="lead reveal d2" style="margin-top:14px">Для меня главное — не просто технически провести сделку, а снять с вас стресс. Чтобы покупка или продажа жилья была спокойной и понятной, а в итоге вы обрели дом, в котором будете по-настоящему счастливы.</p>
+      <div class="words reveal d3"><span>Организованная</span><span>Внимательная</span><span>Надёжная</span></div>
       <ul class="checks">
-        <li class="reveal d2">Веду сделку лично от первой встречи до передачи ключей</li>
-        <li class="reveal d3">Проверяю юридическую чистоту каждого объекта перед сделкой</li>
-        <li class="reveal d4">Помогаю с ипотекой, одобрением и материнским капиталом</li>
-        <li class="reveal d5">За мной стоят 17 лет опыта и команда юристов DОМИАН</li>
+        <li class="reveal d2">Беру на себя всю рутину, документы и сложные переговоры</li>
+        <li class="reveal d3">Подробно и терпеливо объясняю каждый шаг сделки</li>
+        <li class="reveal d4">Переживаю за результат так, будто это моя собственная сделка</li>
+        <li class="reveal d5">Сложные цепочки и документы — задачи, которые я решаю ежедневно</li>
       </ul>
-      <p class="quote reveal">«Для меня каждая сделка — это история семьи, которая начинает новую главу. Я отвечаю за то, чтобы она началась спокойно».</p>
+      <div class="facts reveal">
+        <div><b>8 лет</b>руководила своим бизнесом</div>
+        <div><b>Мама троих</b>детей — умею управлять хаосом</div>
+        <div><b>Высшее</b>банковское образование</div>
+        <div><b>Бачата</b>восточные танцы и йога</div>
+      </div>
+      <p class="quote reveal">«Мой опыт научил меня главному: любой хаос и неопределённость можно превратить в систему и уют».</p>
       <p class="sign reveal">— Елена Алиева</p>
     </div>
   </div>
@@ -787,7 +803,7 @@ footer{padding:60px 0 110px;color:var(--ink-3);font-size:14px}
     </div>
     <div class="faq">
       <details class="reveal"><summary>Сколько стоят ваши услуги?<i></i></summary><p class="ans">Стоимость зависит от задачи: покупка, продажа, обмен или только проверка документов. Первая консультация бесплатная. На ней я разберу вашу ситуацию и назову точную стоимость, без скрытых доплат.</p></details>
-      <details class="reveal d1"><summary>Поможете получить ипотеку, если банки отказали?<i></i></summary><p class="ans">Да. Разберусь в причине отказа, подготовлю документы и подам заявки сразу в несколько банков. Это заметно повышает шансы на одобрение.</p></details>
+      <details class="reveal d1"><summary>Поможете получить ипотеку, если банки отказали?<i></i></summary><p class="ans">Да. У меня высшее банковское образование, поэтому я понимаю, как банк смотрит на заёмщика. Разберусь в причине отказа, подготовлю документы и подам заявки сразу в несколько банков. Это заметно повышает шансы на одобрение.</p></details>
       <details class="reveal d2"><summary>Можно купить квартиру с материнским капиталом?<i></i></summary><p class="ans">Да, маткапитал можно направить на первый взнос или погашение ипотеки. Я подскажу, какие объекты подходят, и помогу с документами для Соцфонда.</p></details>
       <details class="reveal d3"><summary>Как вы проверяете квартиру перед покупкой?<i></i></summary><p class="ans">Проверяю выписку из ЕГРН, историю перехода прав, собственников и прописанных, обременения, долги и судебные споры. С застройщиками проверяю разрешительную документацию и условия договора.</p></details>
       <details class="reveal d4"><summary>Работаете только с Северным районом?<i></i></summary><p class="ans">Нет, я работаю по всему Ростову-на-Дону и Ростовской области. Северный — район, который я знаю особенно хорошо.</p></details>
