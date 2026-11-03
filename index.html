@@ -7,7 +7,7 @@
 <meta name="description" content="Елена Алиева — лучший агент офиса «Северный» компании DОМИАН 2025 года. Вторичное жильё и новостройки в Ростове-на-Дону. В недвижимости с 2022 года, более 160 сделок, 95% клиентов по рекомендации. Новостройки без комиссии, ипотека, материнский капитал, альтернативные сделки, юридическая проверка.">
 <meta property="og:title" content="Елена Алиева — агент по недвижимости в Ростове-на-Дону">
 <meta property="og:description" content="Вторичка и новостройки без риска. Лучший агент офиса «Северный» 2025. 160+ сделок, 95% клиентов по рекомендации.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="https://stary1ema2708.github.io/aliyeva-site/img/hero.jpg">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#FAF8F5">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,9 @@
   "name": "Елена Алиева — агент по недвижимости DОМИАН",
   "image": "img/hero.jpg",
   "telephone": "+79289675655",
-  "address": {"@type": "PostalAddress","streetAddress": "пр. Космонавтов, 32в","addressLocality": "Ростов-на-Дону","addressCountry": "RU"},
+  "email": "honeyra@mail.ru",
+  "address": {"@type": "PostalAddress","streetAddress": "пр. Космонавтов, 32в/21в, ТОЦ «Северный», 3 этаж, офис 25","addressLocality": "Ростов-на-Дону","addressCountry": "RU"},
+  "sameAs": ["https://t.me/Letidasa", "https://vk.ru/letidasa"],
   "areaServed": "Ростов-на-Дону и Ростовская область"
 }
 </script>
@@ -346,15 +348,87 @@ input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;bac
 .g-item:hover img{transform:scale(1.07)}
 
 /* ---------- Отзывы ---------- */
-.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.review{border:1px dashed #D9CFBE;border-radius:var(--radius);padding:36px 32px;min-height:260px;display:flex;flex-direction:column;background:rgba(255,255,255,.5)}
-.review .qm{font-family:var(--serif);font-size:80px;line-height:.6;color:var(--gold-2);height:36px}
-.review .ph{flex:1;display:grid;gap:10px;margin:12px 0 24px;align-content:start}
-.review .ph i{display:block;height:10px;border-radius:6px;background:linear-gradient(90deg,var(--bg-2),#EDE7DD,var(--bg-2));background-size:200% 100%;animation:sk 2.4s infinite}
-.review .ph i:nth-child(2){width:85%}.review .ph i:nth-child(3){width:65%}
-@keyframes sk{to{background-position:-200% 0}}
-.review .who{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--ink-3)}
-.review .av{width:44px;height:44px;border-radius:50%;background:var(--bg-2)}
+.rating{display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:16px 22px}
+.rating > b{font-family:var(--serif);font-size:54px;line-height:1;font-weight:600}
+.rating small{display:block;font-size:13px;color:var(--ink-3)}
+.stars{color:#E8A93B;letter-spacing:2px;font-size:17px}
+.reviews{columns:3;column-gap:22px}
+.review{break-inside:avoid;margin:0 0 22px;border:1px solid var(--line);border-radius:var(--radius);padding:30px 30px 26px;background:var(--card);position:relative;transition:box-shadow .5s,transform .5s var(--ease)}
+.review:hover{box-shadow:var(--shadow);transform:translateY(-4px)}
+.review .qm{position:absolute;right:26px;top:30px;font-family:var(--serif);font-size:90px;line-height:.6;color:var(--gold-2);opacity:.5}
+.review blockquote{margin:14px 0 22px;font-size:15.5px;line-height:1.6;color:var(--ink-2)}
+.review .who{display:flex;align-items:center;gap:12px;font-size:13px;color:var(--ink-3)}
+.review .who b{display:block;font-size:15px;color:var(--ink);font-weight:600}
+.review .av{width:44px;height:44px;border-radius:50%;background:var(--gold-soft);color:var(--gold);display:grid;place-items:center;font-family:var(--serif);font-size:22px;font-weight:600;flex:none}
+.reviews:not(.all) .extra{display:none}
+.rev-more{text-align:center;margin-top:12px}
+.reviews.all + .rev-more{display:none}
+
+/* ---------- Гарантии ---------- */
+.guar{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.g-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px;transition:transform .5s var(--ease),box-shadow .5s}
+.g-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.g-card .icon{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:var(--bg-2);color:var(--gold);margin-bottom:22px;transition:background .4s,color .4s}
+.g-card:hover .icon{background:var(--ink);color:var(--gold-2)}
+.g-card .icon svg{width:26px;height:26px}
+.g-card h3{font-size:27px;margin-bottom:8px}
+.g-card p{color:var(--ink-2);font-size:15px}
+
+/* ---------- Объекты ---------- */
+.objects{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.obj{background:var(--card);border:1px solid var(--line);border-radius:30px;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .5s}
+.obj:hover{box-shadow:var(--shadow)}
+.obj-photo{position:relative;display:block;width:100%;aspect-ratio:16/10;overflow:hidden;cursor:zoom-in;background:var(--bg-2)}
+.obj-photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.obj:hover .obj-photo img{transform:scale(1.06)}
+.obj-count{position:absolute;right:16px;bottom:16px;display:flex;align-items:center;gap:8px;background:rgba(30,31,35,.72);backdrop-filter:blur(6px);color:#fff;font-size:13.5px;font-weight:600;padding:9px 14px;border-radius:100px}
+.obj-count svg{width:17px;height:17px}
+.obj-badge{position:absolute;left:16px;top:16px;background:rgba(255,255,255,.92);color:var(--ink);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;padding:8px 13px;border-radius:100px}
+.obj-body{padding:30px 32px 32px;display:flex;flex-direction:column;flex:1}
+.obj-top{display:flex;justify-content:space-between;gap:14px;align-items:baseline;flex-wrap:wrap}
+.obj-type{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.obj-price{font-family:var(--serif);font-size:30px;font-weight:600;line-height:1}
+.obj h3{font-size:38px;margin:12px 0 2px}
+.obj-addr{color:var(--ink-3);font-size:15px}
+.obj-specs{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:22px 0}
+.obj-specs li{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:13px;color:var(--ink-3);line-height:1.3}
+.obj-specs b{display:block;font-family:var(--serif);font-size:24px;color:var(--ink);font-weight:600}
+.obj-checks{list-style:none;display:grid;gap:8px;font-size:15px;color:var(--ink-2)}
+.obj-checks li{display:flex;gap:10px;align-items:flex-start}
+.obj-checks svg{width:18px;height:18px;flex:none;color:var(--gold);margin-top:3px}
+.obj-gift{display:flex;gap:10px;align-items:center;margin:18px 0 26px;padding:12px 16px;border-radius:14px;background:var(--gold-soft);color:var(--ink);font-size:15px;font-weight:500}
+.obj-gift svg{width:22px;height:22px;flex:none;color:var(--gold)}
+.obj-acts{display:flex;gap:10px;margin-top:auto;flex-wrap:wrap}
+.obj-acts .btn{flex:1}
+.obj-more{margin-top:22px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;border:1px dashed #D9CFBE;border-radius:24px;padding:22px 28px}
+.obj-more p{color:var(--ink-2);max-width:640px}
+
+/* ---------- Просмотр фото ---------- */
+.lb{position:fixed;inset:0;z-index:95;background:rgba(18,18,21,.94);display:grid;place-items:center;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
+.lb.open{opacity:1;visibility:visible}
+.lb figure{margin:0;max-width:min(1200px,92vw);text-align:center}
+.lb img{max-width:100%;max-height:84vh;border-radius:14px;display:block;margin:0 auto;object-fit:contain;transition:opacity .25s}
+.lb figcaption{color:rgba(255,255,255,.7);font-size:14px;margin-top:14px}
+.lb-close{position:absolute;right:18px;top:12px;color:#fff;font-size:40px;width:52px;height:52px;z-index:2}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.1);color:#fff;display:grid;place-items:center;transition:background .3s;z-index:2}
+.lb-nav:hover{background:rgba(255,255,255,.22)}
+.lb-nav svg{width:24px;height:24px}
+.lb-nav.prev{left:18px}.lb-nav.next{right:18px}
+
+/* ---------- Контакты: доп. ---------- */
+.c-list{grid-template-columns:1fr 1fr}
+.c-link.wide{grid-column:1/-1}
+.c-info{display:grid;gap:10px;font-size:14.5px;color:rgba(255,255,255,.62)}
+.c-info b{display:block;color:var(--gold-2);font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:2px}
+@media (max-width:1100px){.guar{grid-template-columns:1fr 1fr}.objects{grid-template-columns:1fr}.reviews{columns:2}}
+@media (max-width:720px){
+  .guar{grid-template-columns:1fr}.reviews{columns:1}
+  .obj-body{padding:24px 20px 24px}.obj h3{font-size:32px}.obj-specs b{font-size:21px}.obj-specs li{padding:10px}
+  .obj-acts .btn{flex:1 1 100%}
+  .c-list{grid-template-columns:1fr}
+  .lb-nav{top:auto;bottom:18px;transform:none}.lb img{max-height:76vh}
+  .rating > b{font-size:44px}
+}
 
 /* ---------- FAQ ---------- */
 .faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}
@@ -503,7 +577,7 @@ footer{padding:60px 0 110px;color:var(--ink-3);font-size:14px}
       <span><b>Елена Алиева</b><small>агент DОМИАН</small></span>
     </a>
     <nav class="menu" aria-label="Основное меню">
-      <a href="#about">Обо мне</a><a href="#services">Услуги</a><a href="#quiz">Подбор</a><a href="#calc">Ипотека</a><a href="#faq">Вопросы</a><a href="#contacts">Контакты</a>
+      <a href="#about">Обо мне</a><a href="#services">Услуги</a><a href="#objects">Объекты</a><a href="#calc">Ипотека</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a>
     </nav>
     <div class="nav-right">
       <a class="phone" href="tel:+79289675655">+7 (928) 967-56-55</a>
@@ -513,7 +587,7 @@ footer{padding:60px 0 110px;color:var(--ink-3);font-size:14px}
   </div>
 </header>
 <nav class="mobile-menu" id="mobileMenu" aria-label="Мобильное меню">
-  <a href="#about">Обо мне</a><a href="#services">Услуги</a><a href="#quiz">Подбор квартиры</a><a href="#calc">Ипотека</a><a href="#faq">Вопросы</a><a href="#contacts">Контакты</a>
+  <a href="#about">Обо мне</a><a href="#services">Услуги</a><a href="#objects">Объекты в продаже</a><a href="#quiz">Подбор квартиры</a><a href="#calc">Ипотека</a><a href="#reviews">Отзывы</a><a href="#faq">Вопросы</a><a href="#contacts">Контакты</a>
   <a class="phone" href="tel:+79289675655">+7 (928) 967-56-55</a>
 </nav>
 
@@ -610,7 +684,7 @@ footer{padding:60px 0 110px;color:var(--ink-3);font-size:14px}
       <div class="facts reveal">
         <div><b>8 лет</b>руководила своим бизнесом</div>
         <div><b>Мама троих</b>детей — умею управлять хаосом</div>
-        <div><b>Высшее</b>банковское образование</div>
+        <div><b>Высшее</b>экономическое, «Банковское дело»</div>
         <div><b>Бачата</b>восточные танцы и йога</div>
       </div>
       <p class="quote reveal">«Мой опыт научил меня главному: любой хаос и неопределённость можно превратить в систему и уют».</p>
@@ -637,6 +711,75 @@ footer{padding:60px 0 110px;color:var(--ink-3);font-size:14px}
     <div class="services" style="grid-template-columns:1fr;margin-top:22px">
       <article class="service reveal" data-tilt style="display:flex;gap:28px;align-items:center;flex-wrap:wrap"><div class="icon" style="margin:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><div style="flex:1;min-width:240px"><h3>Юридическая проверка</h3><p>Проверяю историю квартиры, собственников, обременения и долги. Вместе с лучшими юристами закрываю риски, о которых покупатель обычно даже не знает.</p></div><a href="#contacts" class="btn btn-ghost btn-small" style="position:relative">Проверить объект</a></article>
     </div>
+  </div>
+</section>
+
+<!-- ============ ГАРАНТИИ ============ -->
+<section id="guarantees" style="padding-top:0">
+  <div class="container">
+    <div class="head-row">
+      <div><span class="eyebrow reveal">Гарантии</span><h2 class="reveal d1">Работаю <em>честно и прозрачно</em></h2></div>
+      <p class="lead reveal d2" style="max-width:420px">Вы заранее знаете, сколько стоит работа и что именно я сделаю.</p>
+    </div>
+    <div class="guar">
+      <div class="g-card reveal d0"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16v12H4z"/><path d="M4 11h16M8 15h3"/></svg></div><h3>Прозрачные платежи</h3><p>Фиксированная комиссия без скрытых доплат и «мелкого шрифта». Все суммы обсуждаем заранее.</p></div>
+      <div class="g-card reveal d1"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><h3>Юрист до регистрации</h3><p>Юридическое сопровождение сделки до регистрации права собственности, а не только до подписания.</p></div>
+      <div class="g-card reveal d2"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-6 10 6z"/></svg></div><h3>Лучшие условия в банке</h3><p>Благодаря партнёрским программам с банками помогаю получить выгодные условия по ипотеке или рассрочке.</p></div>
+      <div class="g-card reveal d0"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg></div><h3>Персональная стратегия</h3><p>Разрабатываю стратегию продажи или покупки под ваши цели, сроки и бюджет.</p></div>
+      <div class="g-card reveal d1"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></div><h3>Всегда на связи</h3><p>Провожу показы в удобное для вас время, включая выходные дни.</p></div>
+      <div class="g-card reveal d2"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg></div><h3>Работаю дистанционно</h3><p>Можно купить или продать квартиру в Ростове, находясь в другом городе: приезжать нужно только на сделку.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ОБЪЕКТЫ ============ -->
+<section id="objects" style="padding-top:0">
+  <div class="container">
+    <div class="head-row">
+      <div><span class="eyebrow reveal">Объекты</span><h2 class="reveal d1">Квартиры <em>в продаже</em></h2></div>
+      <p class="lead reveal d2" style="max-width:420px">У каждого объекта полная стоимость в договоре, один взрослый собственник и никаких обременений.</p>
+    </div>
+    <div class="objects">
+      <article class="obj reveal">
+        <button class="obj-photo" type="button" data-gal="zv" aria-label="Смотреть все фото: ЖК «Звёздный»">
+          <img src="img/obj/zv-01.jpg" alt="Вид из окна 2-комнатной квартиры на 20 этаже, ЖК «Звёздный»" loading="lazy">
+          <span class="obj-count"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="3.5"/><path d="M8.5 6l1.5-2h4l1.5 2"/></svg>15 фото</span>
+          <span class="obj-badge">Кирпичный дом</span>
+        </button>
+        <div class="obj-body">
+          <div class="obj-top"><span class="obj-type">2-комнатная квартира</span><span class="obj-price">Цена по запросу</span></div>
+          <h3>ЖК «Звёздный»</h3>
+          <p class="obj-addr">Ростов-на-Дону, ул. Пацаева, 18</p>
+          <ul class="obj-specs"><li><b>56 м²</b>+ балкон</li><li><b>20 / 22</b>этаж</li><li><b>2014</b>год постройки</li></ul>
+          <ul class="obj-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Полная стоимость в ДКП</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Один взрослый собственник</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Без обременений</li></ul>
+          <p class="obj-gift"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="8" width="18" height="5" rx="1"/><path d="M5 13v8h14v-8M12 8v13M12 8S10.5 3.5 8 4.5 9 8 12 8zm0 0s1.5-4.5 4-3.5S15 8 12 8z"/></svg>Мебель и техника остаются</p>
+          <div class="obj-acts">
+            <button class="btn btn-ghost btn-small" type="button" data-gal="zv">Все фото</button>
+            <button class="btn btn-dark btn-small" type="button" data-show="2-комнатная квартира, ЖК «Звёздный», ул. Пацаева, 18">Записаться на показ</button>
+          </div>
+        </div>
+      </article>
+      <article class="obj reveal d1">
+        <button class="obj-photo" type="button" data-gal="kr" aria-label="Смотреть все фото: ЖК «Кристалл»">
+          <img src="img/obj/kr-01.jpg" alt="Гостиная с камином в 3-комнатной квартире, ЖК «Кристалл»" loading="lazy">
+          <span class="obj-count"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="3.5"/><path d="M8.5 6l1.5-2h4l1.5 2"/></svg>21 фото</span>
+          <span class="obj-badge">Ремонт премиум-класса</span>
+        </button>
+        <div class="obj-body">
+          <div class="obj-top"><span class="obj-type">3-комнатная · бизнес-класс</span><span class="obj-price">38 000 000 ₽</span></div>
+          <h3>ЖК «Кристалл»</h3>
+          <p class="obj-addr">Ростов-на-Дону, ул. Соколова, 86</p>
+          <ul class="obj-specs"><li><b>127 м²</b>+ балкон</li><li><b>5 / 15</b>этаж</li><li><b>2</b>санузла</li></ul>
+          <ul class="obj-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Новый ремонт из материалов премиум-класса</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Полная стоимость в ДКП</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Один взрослый собственник</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Без обременений</li></ul>
+          <p class="obj-gift"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="8" width="18" height="5" rx="1"/><path d="M5 13v8h14v-8M12 8v13M12 8S10.5 3.5 8 4.5 9 8 12 8zm0 0s1.5-4.5 4-3.5S15 8 12 8z"/></svg>Квартира полностью укомплектована: остаётся всё, даже посуда</p>
+          <div class="obj-acts">
+            <button class="btn btn-ghost btn-small" type="button" data-gal="kr">Все фото</button>
+            <button class="btn btn-dark btn-small" type="button" data-show="3-комнатная квартира, ЖК «Кристалл», ул. Соколова, 86">Записаться на показ</button>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="obj-more reveal"><p>Не нашли подходящую квартиру? Подберу варианты под ваш запрос и бюджет.</p><a href="#quiz" class="btn btn-ghost btn-small">Подобрать квартиру</a></div>
   </div>
 </section>
 
@@ -823,18 +966,33 @@ footer{padding:60px 0 110px;color:var(--ink-3);font-size:14px}
   </div>
 </div>
 
-<!-- ============ ОТЗЫВЫ (пока пустые) ============ -->
+<!-- ============ ОТЗЫВЫ ============ -->
 <section id="reviews" style="padding-top:0">
   <div class="container">
-    <span class="eyebrow reveal">Отзывы</span>
-    <h2 class="reveal d1">Что говорят <em>клиенты</em></h2>
-    <p class="lead reveal d2" style="margin-bottom:50px">Скоро здесь появятся отзывы семей, с которыми мы прошли путь до ключей.</p>
-    <!-- Чтобы добавить отзыв: замените блок .ph текстом в <p>, а .who — именем клиента -->
-    <div class="reviews">
-      <div class="review reveal"><div class="qm">“</div><div class="ph"><i></i><i></i><i></i></div><div class="who"><span class="av"></span>Отзыв скоро появится</div></div>
-      <div class="review reveal d1"><div class="qm">“</div><div class="ph"><i></i><i></i><i></i></div><div class="who"><span class="av"></span>Отзыв скоро появится</div></div>
-      <div class="review reveal d2"><div class="qm">“</div><div class="ph"><i></i><i></i><i></i></div><div class="who"><span class="av"></span>Отзыв скоро появится</div></div>
+    <div class="head-row">
+      <div><span class="eyebrow reveal">Отзывы</span><h2 class="reveal d1">Что говорят <em>клиенты</em></h2></div>
+      <div class="rating reveal d2"><b>5,0</b><div><span class="stars" aria-label="5 из 5">★★★★★</span><small>более 20 отзывов на Яндекс Картах</small></div></div>
     </div>
+    <!-- Чтобы добавить отзыв: скопируйте блок <figure class="review"> и замените текст, имя и дату -->
+    <div class="reviews" id="reviewList">
+      <figure class="review reveal"><div class="qm">“</div><span class="stars" aria-label="5 из 5">★★★★★</span><blockquote>Покупали квартиру в Ростове, сами находясь в другом городе. Всю работу доверили агенту Елене из Домиана. Прилетели уже на саму сделку. Всё прошло идеально.</blockquote><figcaption class="who"><span class="av">М</span><span><b>Майя Р.</b>24 ноября 2025</span></figcaption></figure>
+      <figure class="review reveal"><div class="qm">“</div><span class="stars" aria-label="5 из 5">★★★★★</span><blockquote>На старте поиска недвижимости обратились к нескольким риэлторам разных агентств. И только Алиева Елена отнеслась к нашему вопросу ответственно! Остальные после одного-двух показов просто забывали про нас. Елена же не переставала подбирать нам варианты, консультировать и показывать их, пока мы не приняли решение о покупке. Результат превзошёл ожидания и по стоимости, и по качеству недвижимости!</blockquote><figcaption class="who"><span class="av">Р</span><span><b>Роман К.</b>20 февраля 2025</span></figcaption></figure>
+      <figure class="review reveal"><div class="qm">“</div><span class="stars" aria-label="5 из 5">★★★★★</span><blockquote>Спасибо огромное Алиевой Елене за помощь в продаже 3-комнатной квартиры и покупке 1-комнатной квартиры сыну. Таким и должен быть риэлтор! Сразу откликнулась на наш звонок, довольно быстро нашла покупателей и помогла найти квартиру сыну, как и хотели. Все остались очень довольны.</blockquote><figcaption class="who"><span class="av">Н</span><span><b>Наталия М.</b>16 марта 2025</span></figcaption></figure>
+      <figure class="review reveal"><div class="qm">“</div><span class="stars" aria-label="5 из 5">★★★★★</span><blockquote>Хочу выразить огромную благодарность риэлтору Алиевой Елене за помощь в покупке домовладения. Все возникающие вопросы решались оперативно и чётко. Она всегда была на связи, отвечала на все мои вопросы и поддерживала в моменты неуверенности. Благодаря её работе сделка прошла быстро, безопасно и с минимальной суетой.</blockquote><figcaption class="who"><span class="av">Л</span><span><b>Людмила Е.</b>24 октября 2025</span></figcaption></figure>
+      <figure class="review reveal"><div class="qm">“</div><span class="stars" aria-label="5 из 5">★★★★★</span><blockquote>Спасибо большое агенту Елене Алиевой! Всегда были на связи, еженедельный отчёт о проделанной работе на протяжении всего периода совместной работы. Проблем не возникало, что и привело к положительному результату по продаже недвижимости. Всем рекомендую!</blockquote><figcaption class="who"><span class="av">С</span><span><b>Сергей П.</b>12 апреля 2025</span></figcaption></figure>
+      <figure class="review reveal"><div class="qm">“</div><span class="stars" aria-label="5 из 5">★★★★★</span><blockquote>Хочется сказать спасибо риэлтору Елене Алиевой. Сразу видно, что человек очень любит свою работу: всегда на связи, всегда расскажет, объяснит, подскажет — всё разложит «по полочкам». Спасибо вам, Елена, что помогли приобрести мою идеальную квартиру! Всем друзьям буду советовать только вас.</blockquote><figcaption class="who"><span class="av">Н</span><span><b>Наталья Г.</b>1 октября 2026</span></figcaption></figure>
+      <figure class="review reveal extra"><div class="qm">“</div><span class="stars" aria-label="5 из 5">★★★★★</span><blockquote>Хотим выразить огромную благодарность риэлтору Елене Алиевой за быструю продажу квартиры в ипотеке, а также за быстрый поиск новой недвижимости.</blockquote><figcaption class="who"><span class="av">А</span><span><b>Александр Г.</b>1 ноября 2025</span></figcaption></figure>
+      <figure class="review reveal extra"><div class="qm">“</div><span class="stars" aria-label="5 из 5">★★★★★</span><blockquote>Огромное спасибо риэлтору Елене Алиевой и юристу, которые помогли нам приобрести квартиру и сделали этот процесс лёгким и приятным. С бесконечным терпением отвечали на наши вопросы, развеивали наши страхи и сомнения, делали это с улыбкой и неизменной уверенностью, что всё будет хорошо.</blockquote><figcaption class="who"><span class="av">С</span><span><b>Светлана С.</b>25 августа 2024</span></figcaption></figure>
+      <figure class="review reveal extra"><div class="qm">“</div><span class="stars" aria-label="5 из 5">★★★★★</span><blockquote>Всё удачно. Дистанционно нашли покупателя на квартиру по приемлемой цене, приехал только на продажу. Риэлтора Елену рекомендую!</blockquote><figcaption class="who"><span class="av">А</span><span><b>Алексей В.</b>3 апреля 2026</span></figcaption></figure>
+      <figure class="review reveal extra"><div class="qm">“</div><span class="stars" aria-label="5 из 5">★★★★★</span><blockquote>Елена, наш риэлтор, помогла найти просто идеальную квартиру, которая полностью соответствует всем требованиям. Оперативно провела просмотры, все вопросы решались быстро и профессионально. Спасибо!</blockquote><figcaption class="who"><span class="av">М</span><span><b>Мария Б.</b>31 января 2024</span></figcaption></figure>
+      <figure class="review reveal extra"><div class="qm">“</div><span class="stars" aria-label="5 из 5">★★★★★</span><blockquote>Хотелось бы отметить работу Елены Алиевой. Очень хороший человек, профессионал своего дела: тактичная, входит в положение, всегда на связи. Помогла нам в непростой ситуации, консультировала по многим вопросам. Рекомендую!</blockquote><figcaption class="who"><span class="av">Н</span><span><b>Нелли С.</b>1 ноября 2023</span></figcaption></figure>
+      <figure class="review reveal extra"><div class="qm">“</div><span class="stars" aria-label="5 из 5">★★★★★</span><blockquote>Хотим от всей души выразить искреннюю благодарность Елене Алиевой за проделанную работу. Ваш профессионализм, ответственность и внимание к деталям впечатляют. Благодаря вашим усилиям мы смогли быстро купить квартиру в районе, в котором хотели, и по выгодной ставке.</blockquote><figcaption class="who"><span class="av">А</span><span><b>Алёна Б.</b>сообщение в мессенджере</span></figcaption></figure>
+      <figure class="review reveal extra"><div class="qm">“</div><span class="stars" aria-label="5 из 5">★★★★★</span><blockquote>Проводим не первый раз сделку купли-продажи через агентство Домиан. Всё отлично! Особая благодарность Елене Алиевой! Профессионал своего дела! Ненавязчивое, очень приятное общение.</blockquote><figcaption class="who"><span class="av">Е</span><span><b>Елена Б.</b>24 августа 2024</span></figcaption></figure>
+      <figure class="review reveal extra"><div class="qm">“</div><span class="stars" aria-label="5 из 5">★★★★★</span><blockquote>Очень благодарна агенту Елене Алиевой. Очень пунктуальный, внимательный и ответственный работник. Сделка состоялась, большое спасибо!</blockquote><figcaption class="who"><span class="av">Г</span><span><b>Галина Б.</b>27 октября 2023</span></figcaption></figure>
+      <figure class="review reveal extra"><div class="qm">“</div><span class="stars" aria-label="5 из 5">★★★★★</span><blockquote>Всё отлично! Помогли быстро найти покупателя и продать квартиру! Рекомендую!</blockquote><figcaption class="who"><span class="av">С</span><span><b>Сергей В.</b>21 октября 2026</span></figcaption></figure>
+      <figure class="review reveal extra"><div class="qm">“</div><span class="stars" aria-label="5 из 5">★★★★★</span><blockquote>Благодарю за успешную сделку, всё прошло отлично, всем рекомендую. Елена Алиева очень добросовестный и хороший человек.</blockquote><figcaption class="who"><span class="av">Г</span><span><b>Георг А.</b>5 октября 2023</span></figcaption></figure>
+    </div>
+    <div class="rev-more"><button class="btn btn-ghost" type="button" id="revMore">Показать ещё отзывы</button></div>
   </div>
 </section>
 
@@ -850,9 +1008,10 @@ footer{padding:60px 0 110px;color:var(--ink-3);font-size:14px}
     <div class="faq">
       <details class="reveal"><summary>Сколько стоят ваши услуги?<i></i></summary><p class="ans">Консультация бесплатная. Покупка квартиры у застройщика для вас без комиссии. Стоимость остальных услуг зависит от задачи: покупка, продажа, альтернативная сделка или только проверка документов. На ней я разберу вашу ситуацию и назову точную стоимость, без скрытых доплат.</p></details>
       <details class="reveal d1"><summary>Покупка новостройки через вас платная?<i></i></summary><p class="ans">Нет, для покупателя это бесплатно. Я работаю с застройщиками напрямую, а цена квартиры для вас такая же, как в отделе продаж застройщика. При этом я помогаю выбрать ЖК, проверяю договор и веду сделку до ключей.</p></details>
-      <details class="reveal d1"><summary>Поможете получить ипотеку, если банки отказали?<i></i></summary><p class="ans">Да. У меня высшее банковское образование, поэтому я понимаю, как банк смотрит на заёмщика. Разберусь в причине отказа, подготовлю документы и подам заявки сразу в несколько банков. Это заметно повышает шансы на одобрение.</p></details>
+      <details class="reveal d1"><summary>Поможете получить ипотеку, если банки отказали?<i></i></summary><p class="ans">Да. У меня высшее экономическое образование по специальности «Банковское дело», поэтому я понимаю, как банк смотрит на заёмщика. Разберусь в причине отказа, подготовлю документы и подам заявки сразу в несколько банков. Это заметно повышает шансы на одобрение.</p></details>
       <details class="reveal d2"><summary>Можно купить квартиру с материнским капиталом?<i></i></summary><p class="ans">Да, маткапитал можно направить на первый взнос или погашение ипотеки. Я подскажу, какие объекты подходят, и помогу с документами для Соцфонда.</p></details>
       <details class="reveal d3"><summary>Как вы проверяете квартиру перед покупкой?<i></i></summary><p class="ans">Проверяю выписку из ЕГРН, историю перехода прав, собственников и прописанных, обременения, долги и судебные споры. С застройщиками проверяю разрешительную документацию и условия договора.</p></details>
+      <details class="reveal d4"><summary>Можно купить или продать квартиру, если я в другом городе?<i></i></summary><p class="ans">Да, я работаю дистанционно. Клиенты из других городов доверяли мне всю работу: поиск, показы, переговоры и подготовку документов. Приезжали они только на саму сделку.</p></details>
       <details class="reveal d4"><summary>Работаете только с Северным районом?<i></i></summary><p class="ans">Нет, я работаю по всему Ростову-на-Дону и Ростовской области. Северный — район, который я знаю особенно хорошо.</p></details>
     </div>
   </div>
@@ -867,11 +1026,17 @@ footer{padding:60px 0 110px;color:var(--ink-3);font-size:14px}
         <h2>Давайте <em>обсудим</em> вашу задачу</h2>
         <p class="lead">Позвоните или напишите в удобный мессенджер. Консультация бесплатная и ни к чему вас не обязывает.</p>
         <div class="c-list">
-          <a class="c-link" href="tel:+79289675655"><span class="ci"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><span><small>Телефон</small><b>+7 (928) 967-56-55</b></span></a>
-          <a class="c-link" href="#" data-max><span class="ci" style="font-weight:800;font-size:13px">MAX</span><span><small>Мессенджер MAX</small><b>+7 (928) 967-56-55</b></span></a>
+          <a class="c-link wide" href="tel:+79289675655"><span class="ci"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><span><small>Телефон</small><b>+7 (928) 967-56-55</b></span></a>
+          <a class="c-link" href="https://max.ru/u/f9LHodD0cOLdv1Gueq139lnK7CDkCJeL23CEflCYyqFwOmypqpg6-UBVlZE" target="_blank" rel="noopener"><span class="ci" style="font-weight:800;font-size:13px">MAX</span><span><small>Мессенджер MAX</small><b>Написать</b></span></a>
           <a class="c-link" href="https://t.me/Letidasa" target="_blank" rel="noopener"><span class="ci"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M21.5 4.3 18.4 19c-.2 1-.9 1.3-1.7.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.2 12.9l-4.7-1.5c-1-.3-1-1 .2-1.5L20.2 2.9c.9-.3 1.6.2 1.3 1.4z"/></svg></span><span><small>Telegram</small><b>@Letidasa</b></span></a>
+          <a class="c-link" href="https://wa.me/message/UN2INNBZJGWNF1" target="_blank" rel="noopener"><span class="ci"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg></span><span><small>WhatsApp</small><b>Написать</b></span></a>
+          <a class="c-link" href="https://vk.ru/letidasa" target="_blank" rel="noopener"><span class="ci" style="font-weight:800;font-size:14px">VK</span><span><small>ВКонтакте</small><b>letidasa</b></span></a>
+          <a class="c-link wide" href="mailto:honeyra@mail.ru"><span class="ci"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg></span><span><small>Почта</small><b>honeyra@mail.ru</b></span></a>
         </div>
-        <p style="color:rgba(255,255,255,.55);font-size:14px">Офис DОМИАН: Ростов-на-Дону, пр. Космонавтов, 32в</p>
+        <div class="c-info">
+          <p><b>Звонки</b>с 9:00 до 21:00. Показы в удобное время, включая выходные</p>
+          <p><b>Офис</b>пр. Космонавтов, 32в/21в, ТОЦ «Северный», 3 этаж, офис 25</p>
+        </div>
       </div>
       <form class="c-form reveal d2" id="contactForm" novalidate>
         <h3>Оставьте заявку</h3>
@@ -885,7 +1050,7 @@ footer{padding:60px 0 110px;color:var(--ink-3);font-size:14px}
     </div>
     <div class="map reveal">
       <iframe title="Офис на карте" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=39.7020%2C47.2920%2C39.7200%2C47.3000&layer=mapnik&marker=47.2961%2C39.7139"></iframe>
-      <div class="addr"><b>Офис DОМИАН</b>Ростов-на-Дону, пр. Космонавтов, 32в<br><a class="btn btn-dark btn-small" style="margin-top:14px" href="https://yandex.ru/maps/?rtext=~47.2961%2C39.7139&rtt=auto" target="_blank" rel="noopener">Построить маршрут</a></div>
+      <div class="addr"><b>Офис DОМИАН</b>Ростов-на-Дону, пр. Космонавтов, 32в/21в<br>ТОЦ «Северный», 3 этаж, офис 25<br><a class="btn btn-dark btn-small" style="margin-top:14px" href="https://yandex.ru/maps/?rtext=~47.2961%2C39.7139&rtt=auto" target="_blank" rel="noopener">Построить маршрут</a></div>
     </div>
   </div>
 </section>
@@ -894,7 +1059,7 @@ footer{padding:60px 0 110px;color:var(--ink-3);font-size:14px}
 <footer>
   <div class="container foot">
     <div class="logo"><span class="logo-mark">ЕА</span><span><b>Елена Алиева</b><small>агент по недвижимости · DОМИАН</small></span></div>
-    <div>© <span id="year"></span> Елена Алиева. Ростов-на-Дону</div>
+    <div>© <span id="year"></span> Елена Алиева. Ростов-на-Дону · <a href="mailto:honeyra@mail.ru">honeyra@mail.ru</a></div>
     <a class="phone" href="tel:+79289675655">+7 (928) 967-56-55</a>
   </div>
 </footer>
@@ -903,12 +1068,21 @@ footer{padding:60px 0 110px;color:var(--ink-3);font-size:14px}
 <div class="fab" id="fab">
   <div class="fab-list">
     <a href="https://t.me/Letidasa" target="_blank" rel="noopener"><span class="i" style="background:#2AABEE">TG</span>Telegram</a>
-    <a href="#" data-max><span class="i" style="background:linear-gradient(135deg,#3B5BFF,#9B3BFF)">M</span>Написать в MAX</a>
+    <a href="https://max.ru/u/f9LHodD0cOLdv1Gueq139lnK7CDkCJeL23CEflCYyqFwOmypqpg6-UBVlZE" data-max><span class="i" style="background:linear-gradient(135deg,#3B5BFF,#9B3BFF)">M</span>Написать в MAX</a>
+    <a href="https://wa.me/message/UN2INNBZJGWNF1" target="_blank" rel="noopener"><span class="i" style="background:#25D366">WA</span>WhatsApp</a>
     <a href="tel:+79289675655"><span class="i" style="background:var(--ink)">☎</span>Позвонить</a>
   </div>
   <button class="fab-main" id="fabBtn" aria-label="Связаться"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg></button>
 </div>
 <a href="#top" class="toTop" id="toTop" aria-label="Наверх"><svg class="ringp" viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+
+<!-- Просмотр фото объектов -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Фото объекта">
+  <button class="lb-close" id="lbClose" aria-label="Закрыть">×</button>
+  <button class="lb-nav prev" id="lbPrev" aria-label="Предыдущее фото"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
+  <button class="lb-nav next" id="lbNext" aria-label="Следующее фото"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg></button>
+</div>
 
 <!-- Окно после отправки заявки -->
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
@@ -916,9 +1090,9 @@ footer{padding:60px 0 110px;color:var(--ink-3);font-size:14px}
     <button class="close" id="mClose" aria-label="Закрыть">×</button>
     <svg class="ok" viewBox="0 0 76 76"><circle pathLength="1" cx="38" cy="38" r="36"/><path pathLength="1" d="M24 39l10 10 19-21"/></svg>
     <h3 id="mTitle">Заявка готова!</h3>
-    <p id="mText">Текст заявки скопирован. Откройте MAX, найдите Елену по номеру <b>+7 928 967-56-55</b> и вставьте сообщение.</p>
+    <p id="mText">Текст заявки уже скопирован. Откройте чат с Еленой в MAX, вставьте сообщение и отправьте.</p>
     <div class="acts">
-      <a class="btn btn-dark" href="#" data-max>Открыть MAX</a>
+      <a class="btn btn-dark" href="https://max.ru/u/f9LHodD0cOLdv1Gueq139lnK7CDkCJeL23CEflCYyqFwOmypqpg6-UBVlZE" data-max>Открыть чат в MAX</a>
       <a class="btn btn-ghost" id="mTg" href="https://t.me/Letidasa" target="_blank" rel="noopener">Или отправить в Telegram</a>
     </div>
   </div>
@@ -926,9 +1100,9 @@ footer{padding:60px 0 110px;color:var(--ink-3);font-size:14px}
 
 <script>
 /* ===== НАСТРОЙКИ =====
-   MAX_URL — ссылка на профиль Елены в MAX (Профиль → Поделиться → Скопировать ссылку).
-   Пока её нет, кнопка открывает MAX, а текст заявки копируется в буфер обмена. */
-const MAX_URL = 'https://max.ru/';
+   MAX_URL — ссылка на профиль Елены в MAX. Текст заявки копируется в буфер обмена,
+   затем открывается чат с Еленой. */
+const MAX_URL = 'https://max.ru/u/f9LHodD0cOLdv1Gueq139lnK7CDkCJeL23CEflCYyqFwOmypqpg6-UBVlZE';
 const TG_USER = 'Letidasa';
 
 const $ = (s, c = document) => c.querySelector(s);
@@ -1162,6 +1336,50 @@ $('#contactForm').addEventListener('submit', e => {
   $$('#programs .chip').forEach(c => c.addEventListener('click', () => { $$('#programs .chip').forEach(x => x.classList.remove('sel')); c.classList.add('sel'); rate.value = c.dataset.rate; upd(); }));
   upd();
 })();
+
+/* --- Объекты: просмотр фото и запись на показ --- */
+(function objectsGallery(){
+  const sets = { zv: { n: 15, name: 'ЖК «Звёздный», ул. Пацаева, 18' }, kr: { n: 21, name: 'ЖК «Кристалл», ул. Соколова, 86' } };
+  const lb = $('#lb'), img = $('#lbImg'), cap = $('#lbCap');
+  let cur = null, i = 0;
+  const src = (id, k) => `img/obj/${id}-${String(k + 1).padStart(2, '0')}.jpg`;
+  const show = () => {
+    const set = sets[cur];
+    img.style.opacity = 0;
+    const next = new Image(); next.src = src(cur, i);
+    next.onload = () => { img.src = next.src; img.style.opacity = 1; };
+    img.alt = set.name + ', фото ' + (i + 1);
+    cap.textContent = `${set.name} · ${i + 1} из ${set.n}`;
+    new Image().src = src(cur, (i + 1) % set.n);
+  };
+  const open = id => { cur = id; i = 0; show(); lb.classList.add('open'); document.body.style.overflow = 'hidden'; };
+  const close = () => { lb.classList.remove('open'); document.body.style.overflow = ''; };
+  const go = d => { const n = sets[cur].n; i = (i + d + n) % n; show(); };
+  $$('[data-gal]').forEach(b => b.addEventListener('click', () => open(b.dataset.gal)));
+  $('#lbPrev').addEventListener('click', () => go(-1));
+  $('#lbNext').addEventListener('click', () => go(1));
+  $('#lbClose').addEventListener('click', close);
+  lb.addEventListener('click', e => { if (e.target === lb) close(); });
+  addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') close(); else if (e.key === 'ArrowLeft') go(-1); else if (e.key === 'ArrowRight') go(1);
+  });
+  let x0 = null;
+  lb.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend', e => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1); x0 = null; });
+  $$('[data-show]').forEach(b => b.addEventListener('click', () => {
+    const f = $('#contactForm');
+    f.msg.value = 'Хочу на показ: ' + b.dataset.show;
+    $('#contacts').scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => f.name.focus({ preventScroll: true }), 900);
+  }));
+})();
+
+/* --- Отзывы: показать все --- */
+$('#revMore').addEventListener('click', () => {
+  const list = $('#reviewList'); list.classList.add('all');
+  $$('.extra', list).forEach(el => el.classList.add('in'));
+});
 
 /* --- Галерея: бесконечная лента --- */
 $('#gTrack').innerHTML += $('#gTrack').innerHTML;
