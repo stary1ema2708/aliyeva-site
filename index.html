@@ -420,7 +420,58 @@ input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;bac
 .c-link.wide{grid-column:1/-1}
 .c-info{display:grid;gap:10px;font-size:14.5px;color:rgba(255,255,255,.62)}
 .c-info b{display:block;color:var(--gold-2);font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:2px}
-@media (max-width:1100px){.guar{grid-template-columns:1fr 1fr}.objects{grid-template-columns:1fr}.reviews{columns:2}}
+.objects{grid-template-columns:repeat(3,1fr)}
+.obj[hidden]{display:none}
+.obj-filter{margin-bottom:26px}
+.obj-filter .chip{background:var(--card)}
+.obj-filter .chip.sel{background:var(--ink)}
+.obj-body{padding:26px 26px 26px}
+.obj h3{font-size:32px}
+.obj-price{font-size:24px}
+.obj-top{flex-direction:column;align-items:flex-start;gap:8px}
+.obj-specs b{font-size:21px}
+.obj-specs li{padding:10px 12px}
+.obj-gap{height:22px}
+.obj-nophoto{display:grid;place-items:center;cursor:default;color:var(--gold);background:linear-gradient(var(--bg-2),var(--bg-2)),var(--bg-2);background-image:linear-gradient(rgba(176,138,78,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(176,138,78,.08) 1px,transparent 1px);background-size:22px 22px}
+.obj-nophoto svg{width:62%;opacity:.75}
+.obj-nophoto .obj-count{background:rgba(30,31,35,.6)}
+
+/* ---------- Истории из практики ---------- */
+.case{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px;background:var(--card);border:1px solid var(--line);border-radius:36px;padding:50px 54px;margin-bottom:22px}
+.case-tag{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.case h3{font-size:clamp(30px,3vw,42px);margin:14px 0 28px;line-height:1.1}
+.case-num{border-top:1px solid var(--line);padding-top:22px;color:var(--ink-3);font-size:15px}
+.case-num b{display:block;font-family:var(--serif);font-size:clamp(52px,6vw,76px);line-height:1;color:var(--gold);font-weight:600;margin-bottom:6px}
+.case-main{color:var(--ink-2);font-size:16px}
+.case-main > p{margin-bottom:14px}
+.case h4{font-family:var(--serif);font-size:24px;color:var(--ink);margin:24px 0 12px;font-weight:600}
+.case-list{list-style:none;display:grid;gap:10px;margin:0 0 26px}
+.case-list li{display:flex;gap:12px;align-items:flex-start}
+.case-list svg{width:18px;height:18px;flex:none;color:var(--gold);margin-top:4px}
+.case-more{border-top:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12);margin:4px 0 22px}
+.case-more summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:16px 0;font-family:var(--serif);font-size:24px;color:#fff}
+.case-more summary::-webkit-details-marker{display:none}
+.case-more summary i{width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.25);position:relative;transition:transform .4s var(--ease)}
+.case-more summary i::before,.case-more summary i::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:1.5px;background:var(--gold-2);transform:translate(-50%,-50%)}
+.case-more summary i::after{transform:translate(-50%,-50%) rotate(90deg)}
+.case-more[open] summary i{transform:rotate(45deg)}
+.case-more ol{padding:0 0 18px 20px;display:grid;gap:12px;animation:qin .5s var(--ease)}
+.case-more ol b{color:#fff}
+.case-res b{color:var(--gold-2)}
+.case-quote{font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.35;color:#fff;border-left:2px solid var(--gold-2);padding-left:18px;margin:22px 0 26px}
+.case.dark{background:radial-gradient(120% 120% at 0% 0%,#2A2B31 0%,var(--ink) 60%);border-color:var(--ink);color:#fff}
+.case.dark h3{color:#fff}
+.case.dark .case-num{border-color:rgba(255,255,255,.14);color:rgba(255,255,255,.6)}
+.case.dark .case-num b{color:var(--gold-2)}
+.case.dark .case-main{color:rgba(255,255,255,.75)}
+.case.dark .case-tag{color:var(--gold-2)}
+.case.dark .case-list svg{color:var(--gold-2)}
+.case-list.warn svg{display:none}.case-list.warn li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold-2);flex:none;margin-top:9px}
+.btn-gold{background:var(--gold-2);color:var(--ink)}
+.btn-gold:hover{box-shadow:0 14px 30px -12px rgba(215,188,138,.6)}
+
+@media (max-width:1100px){.guar{grid-template-columns:1fr 1fr}.objects{grid-template-columns:1fr 1fr}.reviews{columns:2}.case{grid-template-columns:1fr;gap:26px;padding:40px}}
+@media (max-width:720px){.objects{grid-template-columns:1fr}.case{padding:28px 22px;border-radius:26px}.case-quote{font-size:19px}.obj-filter{flex-wrap:nowrap;overflow-x:auto;margin-inline:-16px;padding:2px 16px 6px;scrollbar-width:none}.obj-filter .chip{flex:none}}
 @media (max-width:720px){
   .guar{grid-template-columns:1fr}.reviews{columns:1}
   .obj-body{padding:24px 20px 24px}.obj h3{font-size:32px}.obj-specs b{font-size:21px}.obj-specs li{padding:10px}
@@ -587,7 +638,7 @@ footer{padding:60px 0 110px;color:var(--ink-3);font-size:14px}
   </div>
 </header>
 <nav class="mobile-menu" id="mobileMenu" aria-label="Мобильное меню">
-  <a href="#about">Обо мне</a><a href="#services">Услуги</a><a href="#objects">Объекты в продаже</a><a href="#quiz">Подбор квартиры</a><a href="#calc">Ипотека</a><a href="#reviews">Отзывы</a><a href="#faq">Вопросы</a><a href="#contacts">Контакты</a>
+  <a href="#about">Обо мне</a><a href="#services">Услуги</a><a href="#objects">Объекты в продаже</a><a href="#quiz">Подбор квартиры</a><a href="#calc">Ипотека</a><a href="#cases">Истории из практики</a><a href="#reviews">Отзывы</a><a href="#faq">Вопросы</a><a href="#contacts">Контакты</a>
   <a class="phone" href="tel:+79289675655">+7 (928) 967-56-55</a>
 </nav>
 
@@ -736,11 +787,55 @@ footer{padding:60px 0 110px;color:var(--ink-3);font-size:14px}
 <section id="objects" style="padding-top:0">
   <div class="container">
     <div class="head-row">
-      <div><span class="eyebrow reveal">Объекты</span><h2 class="reveal d1">Квартиры <em>в продаже</em></h2></div>
-      <p class="lead reveal d2" style="max-width:420px">У каждого объекта полная стоимость в договоре, один взрослый собственник и никаких обременений.</p>
+      <div><span class="eyebrow reveal">Объекты</span><h2 class="reveal d1">Объекты <em>в продаже</em></h2></div>
+      <p class="lead reveal d2" style="max-width:420px">Квартиры, новостройка, гараж и участок в Ростове-на-Дону. Покажу в удобное для вас время, включая выходные.</p>
+    </div>
+    <div class="chips obj-filter reveal" id="objFilter">
+      <button class="chip sel" type="button" data-f="all">Все · 7</button>
+      <button class="chip" type="button" data-f="flat">Квартиры · 4</button>
+      <button class="chip" type="button" data-f="new">Новостройки · 1</button>
+      <button class="chip" type="button" data-f="other">Гараж и участок · 2</button>
     </div>
     <div class="objects">
-      <article class="obj reveal">
+      <article class="obj reveal d0" data-cat="flat">
+        <button class="obj-photo" type="button" data-gal="kr" aria-label="Смотреть все фото: ЖК «Кристалл»">
+          <img src="img/obj/kr-01.jpg" alt="Гостиная с камином в 3-комнатной квартире, ЖК «Кристалл»" loading="lazy">
+          <span class="obj-count"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="3.5"/><path d="M8.5 6l1.5-2h4l1.5 2"/></svg>21 фото</span>
+          <span class="obj-badge">Ремонт премиум-класса</span>
+        </button>
+        <div class="obj-body">
+          <div class="obj-top"><span class="obj-type">3-комнатная · бизнес-класс</span><span class="obj-price">38 000 000 ₽</span></div>
+          <h3>ЖК «Кристалл»</h3>
+          <p class="obj-addr">ул. Соколова, 86</p>
+          <ul class="obj-specs"><li><b>127 м²</b>+ балкон</li><li><b>5 / 15</b>этаж</li><li><b>2</b>санузла</li></ul>
+          <ul class="obj-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Новый ремонт из материалов премиум-класса</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Полная стоимость в ДКП</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Один взрослый собственник</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Без обременений</li></ul>
+          <p class="obj-gift"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="8" width="18" height="5" rx="1"/><path d="M5 13v8h14v-8M12 8v13M12 8S10.5 3.5 8 4.5 9 8 12 8zm0 0s1.5-4.5 4-3.5S15 8 12 8z"/></svg>Полностью укомплектована: остаётся всё, даже посуда</p>
+          <div class="obj-acts">
+            <button class="btn btn-ghost btn-small" type="button" data-gal="kr">Все фото</button>
+            <button class="btn btn-dark btn-small" type="button" data-show="3-комнатная квартира, ЖК «Кристалл», ул. Соколова, 86">Записаться на показ</button>
+          </div>
+        </div>
+      </article>
+      <article class="obj reveal d1" data-cat="flat">
+        <button class="obj-photo" type="button" data-gal="vd" aria-label="Смотреть все фото: ЖК «Вдохновение»">
+          <img src="img/obj/vd-01.jpg" alt="Гостиная с кухней в евро-двушке, ЖК «Вдохновение»" loading="lazy">
+          <span class="obj-count"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="3.5"/><path d="M8.5 6l1.5-2h4l1.5 2"/></svg>14 фото</span>
+          <span class="obj-badge">Дизайнерский ремонт</span>
+        </button>
+        <div class="obj-body">
+          <div class="obj-top"><span class="obj-type">Евро-двушка</span><span class="obj-price">Цена по запросу</span></div>
+          <h3>ЖК «Вдохновение»</h3>
+          <p class="obj-addr">ул. Островского, 1а</p>
+          <ul class="obj-specs"><li><b>60 м²</b>площадь</li><li><b>4</b>этаж</li><li><b>Евро-2</b>планировка</li></ul>
+          <ul class="obj-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Дизайнерский ремонт</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Кухня-гостиная и отдельная спальня</li></ul>
+          <div class="obj-gap"></div>
+          <div class="obj-acts">
+            <button class="btn btn-ghost btn-small" type="button" data-gal="vd">Все фото</button>
+            <button class="btn btn-dark btn-small" type="button" data-show="евро-двушка, ЖК «Вдохновение», ул. Островского, 1а">Записаться на показ</button>
+          </div>
+        </div>
+      </article>
+      <article class="obj reveal d2" data-cat="flat">
         <button class="obj-photo" type="button" data-gal="zv" aria-label="Смотреть все фото: ЖК «Звёздный»">
           <img src="img/obj/zv-01.jpg" alt="Вид из окна 2-комнатной квартиры на 20 этаже, ЖК «Звёздный»" loading="lazy">
           <span class="obj-count"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="3.5"/><path d="M8.5 6l1.5-2h4l1.5 2"/></svg>15 фото</span>
@@ -749,7 +844,7 @@ footer{padding:60px 0 110px;color:var(--ink-3);font-size:14px}
         <div class="obj-body">
           <div class="obj-top"><span class="obj-type">2-комнатная квартира</span><span class="obj-price">Цена по запросу</span></div>
           <h3>ЖК «Звёздный»</h3>
-          <p class="obj-addr">Ростов-на-Дону, ул. Пацаева, 18</p>
+          <p class="obj-addr">ул. Пацаева, 18</p>
           <ul class="obj-specs"><li><b>56 м²</b>+ балкон</li><li><b>20 / 22</b>этаж</li><li><b>2014</b>год постройки</li></ul>
           <ul class="obj-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Полная стоимость в ДКП</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Один взрослый собственник</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Без обременений</li></ul>
           <p class="obj-gift"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="8" width="18" height="5" rx="1"/><path d="M5 13v8h14v-8M12 8v13M12 8S10.5 3.5 8 4.5 9 8 12 8zm0 0s1.5-4.5 4-3.5S15 8 12 8z"/></svg>Мебель и техника остаются</p>
@@ -759,22 +854,75 @@ footer{padding:60px 0 110px;color:var(--ink-3);font-size:14px}
           </div>
         </div>
       </article>
-      <article class="obj reveal d1">
-        <button class="obj-photo" type="button" data-gal="kr" aria-label="Смотреть все фото: ЖК «Кристалл»">
-          <img src="img/obj/kr-01.jpg" alt="Гостиная с камином в 3-комнатной квартире, ЖК «Кристалл»" loading="lazy">
-          <span class="obj-count"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="3.5"/><path d="M8.5 6l1.5-2h4l1.5 2"/></svg>21 фото</span>
-          <span class="obj-badge">Ремонт премиум-класса</span>
+      <article class="obj reveal d0" data-cat="flat">
+        <button class="obj-photo" type="button" data-gal="yu" aria-label="Смотреть все фото: ЖК «Южный»">
+          <img src="img/obj/yu-01.jpg" alt="2-комнатная квартира в стройварианте, ЖК «Южный»" loading="lazy">
+          <span class="obj-count"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="3.5"/><path d="M8.5 6l1.5-2h4l1.5 2"/></svg>9 фото</span>
+          <span class="obj-badge">Кирпичный дом</span>
         </button>
         <div class="obj-body">
-          <div class="obj-top"><span class="obj-type">3-комнатная · бизнес-класс</span><span class="obj-price">38 000 000 ₽</span></div>
-          <h3>ЖК «Кристалл»</h3>
-          <p class="obj-addr">Ростов-на-Дону, ул. Соколова, 86</p>
-          <ul class="obj-specs"><li><b>127 м²</b>+ балкон</li><li><b>5 / 15</b>этаж</li><li><b>2</b>санузла</li></ul>
-          <ul class="obj-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Новый ремонт из материалов премиум-класса</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Полная стоимость в ДКП</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Один взрослый собственник</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Без обременений</li></ul>
-          <p class="obj-gift"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="8" width="18" height="5" rx="1"/><path d="M5 13v8h14v-8M12 8v13M12 8S10.5 3.5 8 4.5 9 8 12 8zm0 0s1.5-4.5 4-3.5S15 8 12 8z"/></svg>Квартира полностью укомплектована: остаётся всё, даже посуда</p>
+          <div class="obj-top"><span class="obj-type">2-комнатная · стройвариант</span><span class="obj-price">Цена по запросу</span></div>
+          <h3>ЖК «Южный»</h3>
+          <p class="obj-addr">ул. Ленина, 140а</p>
+          <ul class="obj-specs"><li><b>62,7 м²</b>+ балкон</li><li><b>6 / 17</b>этаж</li><li><b>2015</b>год постройки</li></ul>
+          <ul class="obj-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Стройвариант: ремонт под себя</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Полная стоимость в ДКП</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Один взрослый собственник</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Без обременений</li></ul>
+          <p class="obj-gift"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="8" width="18" height="5" rx="1"/><path d="M5 13v8h14v-8M12 8v13M12 8S10.5 3.5 8 4.5 9 8 12 8zm0 0s1.5-4.5 4-3.5S15 8 12 8z"/></svg>Дизайн-проект в подарок</p>
           <div class="obj-acts">
-            <button class="btn btn-ghost btn-small" type="button" data-gal="kr">Все фото</button>
-            <button class="btn btn-dark btn-small" type="button" data-show="3-комнатная квартира, ЖК «Кристалл», ул. Соколова, 86">Записаться на показ</button>
+            <button class="btn btn-ghost btn-small" type="button" data-gal="yu">Все фото</button>
+            <button class="btn btn-dark btn-small" type="button" data-show="2-комнатная квартира, ЖК «Южный», ул. Ленина, 140а">Записаться на показ</button>
+          </div>
+        </div>
+      </article>
+      <article class="obj reveal d1" data-cat="new">
+        <button class="obj-photo" type="button" data-gal="da" aria-label="Смотреть все фото: ЖК «Донской Арбат»">
+          <img src="img/obj/da-01.jpg" alt="Квартира в предчистовой отделке, ЖК «Донской Арбат»" loading="lazy">
+          <span class="obj-count"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="3.5"/><path d="M8.5 6l1.5-2h4l1.5 2"/></svg>8 фото</span>
+          <span class="obj-badge">Сдача во 2 кв. 2027</span>
+        </button>
+        <div class="obj-body">
+          <div class="obj-top"><span class="obj-type">Новостройка · переуступка</span><span class="obj-price">Цена по запросу</span></div>
+          <h3>ЖК «Донской Арбат»</h3>
+          <p class="obj-addr">Кировский пр., 89а</p>
+          <ul class="obj-specs"><li><b>39,9 м²</b>площадь</li><li><b>8 / 20</b>этаж</li><li><b>2 кв. 2027</b>сдача дома</li></ul>
+          <ul class="obj-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Предчистовая отделка</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Гардеробная</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Окна на восток</li></ul>
+          <div class="obj-gap"></div>
+          <div class="obj-acts">
+            <button class="btn btn-ghost btn-small" type="button" data-gal="da">Все фото</button>
+            <button class="btn btn-dark btn-small" type="button" data-show="квартира 39,9 м², ЖК «Донской Арбат», Кировский пр., 89а">Записаться на показ</button>
+          </div>
+        </div>
+      </article>
+      <article class="obj reveal d2" data-cat="other">
+        <button class="obj-photo" type="button" data-gal="uc" aria-label="Смотреть все фото: Участок в СНТ «Импульс»">
+          <img src="img/obj/uc-01.jpg" alt="Земельный участок с голубыми елями, СНТ «Импульс»" loading="lazy">
+          <span class="obj-count"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="3.5"/><path d="M8.5 6l1.5-2h4l1.5 2"/></svg>8 фото</span>
+          <span class="obj-badge">6 соток</span>
+        </button>
+        <div class="obj-body">
+          <div class="obj-top"><span class="obj-type">Земельный участок</span><span class="obj-price">Цена по запросу</span></div>
+          <h3>Участок в СНТ «Импульс»</h3>
+          <p class="obj-addr">Северный жилой массив</p>
+          <ul class="obj-specs"><li><b>6 соток</b>площадь</li><li><b>Ровный</b>рельеф</li><li><b>Есть</b>хозпостройки</li></ul>
+          <ul class="obj-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Ровный участок</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Есть хозпостройки</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Хвойные растения</li></ul>
+          <div class="obj-gap"></div>
+          <div class="obj-acts">
+            <button class="btn btn-ghost btn-small" type="button" data-gal="uc">Все фото</button>
+            <button class="btn btn-dark btn-small" type="button" data-show="земельный участок 6 соток, СНТ «Импульс»">Записаться на показ</button>
+          </div>
+        </div>
+      </article>
+      <article class="obj reveal d0" data-cat="other">
+        <div class="obj-photo obj-nophoto"><svg viewBox="0 0 320 200" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M40 170h240M60 170V80l100-40 100 40v90"/><path d="M95 170V105h130v65"/><path d="M95 120h130M95 135h130M95 150h130"/><path d="M150 62h20"/></svg><span class="obj-badge">Тёплый и сухой</span><span class="obj-count">Фото пришлю по запросу</span></div>
+        <div class="obj-body">
+          <div class="obj-top"><span class="obj-type">Гараж</span><span class="obj-price">Цена по запросу</span></div>
+          <h3>Гараж в ГК «Космос»</h3>
+          <p class="obj-addr">ул. Стартовая, 1 (СЖМ)</p>
+          <ul class="obj-specs"><li><b>2</b>этаж</li><li><b>Тёплый</b>и сухой</li><li><b>Есть</b>смотровая яма</li></ul>
+          <ul class="obj-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Тёплый и сухой</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Со смотровой ямой</li></ul>
+          <div class="obj-gap"></div>
+          <div class="obj-acts">
+            
+            <button class="btn btn-dark btn-small" type="button" data-show="гараж в ГК «Космос», ул. Стартовая, 1">Записаться на показ</button>
           </div>
         </div>
       </article>
@@ -965,6 +1113,64 @@ footer{padding:60px 0 110px;color:var(--ink-3);font-size:14px}
     <div class="g-item"><img src="img/armchair.jpg" alt="Елена Алиева" loading="lazy"></div>
   </div>
 </div>
+
+<!-- ============ ИСТОРИИ ИЗ ПРАКТИКИ ============ -->
+<section id="cases" style="padding-top:0">
+  <div class="container">
+    <div class="head-row">
+      <div><span class="eyebrow reveal">Кейсы</span><h2 class="reveal d1">Истории <em>из практики</em></h2></div>
+      <p class="lead reveal d2" style="max-width:420px">Две сделки, которые хорошо показывают, как я работаю: быстро, когда всё готово, и спокойно, когда всё сложно.</p>
+    </div>
+
+    <article class="case reveal">
+      <div class="case-side">
+        <span class="case-tag">Продажа · 1-комнатная · Северный</span>
+        <h3>Продала квартиру за 5 дней без выхода в рекламу</h3>
+        <div class="case-num"><b>5 дней</b>от задатка до договора купли-продажи</div>
+      </div>
+      <div class="case-main">
+        <p>Я взяла в эксклюзив 1-комнатную квартиру в центре Северного. Успела провести предпродажную подготовку и собрать документы, но ещё не выставила объект в рекламу.</p>
+        <p>В это время коллега попросила помочь с подбором для своего покупателя. Я показала квартиру на следующий день. Покупатель влюбился в неё и сразу оставил задаток, а через 5 дней мы подписали договор купли-продажи.</p>
+        <h4>Секрет этой сделки прост</h4>
+        <ul class="case-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Грамотная предпродажная подготовка</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Рыночная цена</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Готовый пакет документов</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Сильная сеть контактов и доверие между риелторами</li>
+        </ul>
+        <a href="#contacts" class="btn btn-dark btn-small" data-msg="Хочу продать квартиру так же быстро. Расскажите, с чего начать.">Хочу продать так же быстро</a>
+      </div>
+    </article>
+
+    <article class="case dark reveal">
+      <div class="case-side">
+        <span class="case-tag">Сложная продажа · 3-комнатная</span>
+        <h3>Продала квартиру с запретом на регистрацию, долгом 500 тысяч и «запахом 40 лет»</h3>
+        <div class="case-num"><b>1 000 000 ₽</b>сохранила собственнице</div>
+      </div>
+      <div class="case-main">
+        <p>Ко мне повторно обратилась клиентка, которой я уже помогала с продажей. Квартиру нужно было продать срочно, но ситуация казалась патовой:</p>
+        <ul class="case-list warn">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>На квартиру был наложен запрет на регистрационные действия</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Долг за коммунальные услуги дошёл почти до 500 000 ₽</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Около 40 лет без ремонта: забитая канализация, нет воды на кухне, тяжёлый запах кошек</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Собственница была готова отдать квартиру на 1 млн ₽ ниже рынка, лишь бы закрыть проблему</li>
+        </ul>
+        <details class="case-more">
+          <summary>Как я это сделала <i></i></summary>
+          <ol>
+            <li><b>Остановила панику.</b> Провела глубокий анализ рынка и доказала собственнице, что даже в таком состоянии и с обременением квартира стоит дороже. Мы зафиксировали рыночную цену.</li>
+            <li><b>Решила юридические вопросы.</b> Вместе с грамотным юристом быстро нашли причину запрета, урегулировали спорные вопросы и сняли ограничение. Параллельно продумали, как погасить долг за ЖКХ.</li>
+            <li><b>Правильно подала объект.</b> Честно, но грамотно «упаковала» квартиру для рынка и отвечала на возражения покупателей заранее.</li>
+          </ol>
+        </details>
+        <p class="case-res"><b>Итог:</b> покупатель нашёлся быстро, потому что квартира была готова и юридически, и физически. От задатка до договора прошло 1,5 месяца, а собственница сохранила миллион, который была готова потерять.</p>
+        <p class="case-quote">«Не бывает безвыходных ситуаций. Запреты, долги и запущенное состояние — не повод отдавать недвижимость за бесценок».</p>
+        <a href="#contacts" class="btn btn-gold btn-small" data-msg="У меня сложная ситуация с продажей недвижимости. Хочу составить пошаговый план продажи.">Обсудить сложную продажу</a>
+      </div>
+    </article>
+  </div>
+</section>
 
 <!-- ============ ОТЗЫВЫ ============ -->
 <section id="reviews" style="padding-top:0">
@@ -1339,7 +1545,7 @@ $('#contactForm').addEventListener('submit', e => {
 
 /* --- Объекты: просмотр фото и запись на показ --- */
 (function objectsGallery(){
-  const sets = { zv: { n: 15, name: 'ЖК «Звёздный», ул. Пацаева, 18' }, kr: { n: 21, name: 'ЖК «Кристалл», ул. Соколова, 86' } };
+  const sets = {"kr":{"n":21,"name":"ЖК «Кристалл», ул. Соколова, 86"},"vd":{"n":14,"name":"ЖК «Вдохновение», ул. Островского, 1а"},"zv":{"n":15,"name":"ЖК «Звёздный», ул. Пацаева, 18"},"yu":{"n":9,"name":"ЖК «Южный», ул. Ленина, 140а"},"da":{"n":8,"name":"ЖК «Донской Арбат», Кировский пр., 89а"},"uc":{"n":8,"name":"Участок в СНТ «Импульс», Северный жилой массив"}};
   const lb = $('#lb'), img = $('#lbImg'), cap = $('#lbCap');
   let cur = null, i = 0;
   const src = (id, k) => `img/obj/${id}-${String(k + 1).padStart(2, '0')}.jpg`;
@@ -1374,6 +1580,24 @@ $('#contactForm').addEventListener('submit', e => {
     setTimeout(() => f.name.focus({ preventScroll: true }), 900);
   }));
 })();
+
+/* --- Объекты: фильтр --- */
+$$('#objFilter .chip').forEach(c => c.addEventListener('click', () => {
+  $$('#objFilter .chip').forEach(x => x.classList.toggle('sel', x === c));
+  $$('.objects .obj').forEach(o => {
+    const show = c.dataset.f === 'all' || o.dataset.cat === c.dataset.f;
+    o.hidden = !show; if (show) o.classList.add('in');
+  });
+}));
+
+/* --- Кнопки, которые заполняют форму заявки --- */
+$$('[data-msg]').forEach(b => b.addEventListener('click', e => {
+  e.preventDefault();
+  const f = $('#contactForm');
+  f.msg.value = b.dataset.msg;
+  $('#contacts').scrollIntoView({ behavior: 'smooth' });
+  setTimeout(() => f.name.focus({ preventScroll: true }), 900);
+}));
 
 /* --- Отзывы: показать все --- */
 $('#revMore').addEventListener('click', () => {
